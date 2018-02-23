@@ -1,0 +1,6 @@
+use_frameworks!
+target 'PredicateFlow_Tests' do
+  pod 'PredicateFlow', :path => '../'
+  
+  
+end
