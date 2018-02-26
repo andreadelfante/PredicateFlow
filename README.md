@@ -20,7 +20,7 @@ Write amazing, strong-typed and easy-to-read NSPredicate, allowing you to write 
 2. In Xcode, click on your project in the file list, choose your target under `TARGETS`, click the `Build Phases` tab and add a `New Run Script Phase` by clicking the plus icon in the top left
 3. Drag the new `Run Script` phase **above** the `Compile Sources` phase and **below** `Check Pods Manifest.lock`, expand it and paste the following script:  
    ```
-   "$PODS_ROOT/Sourcery/bin/sourcery" --sources "$PODS_ROOT/PredicateFlow/Classes/Utils/" --sources "$SRCROOT" --templates "$PODS_ROOT/PredicateFlow/Templates/PredicateFlow.stencil" --output "$SRCROOT/PredicateFlow.generated.swift"
+   "$PODS_ROOT/Sourcery/bin/sourcery" --sources "$PODS_ROOT/PredicateFlow/PredicateFlow/Classes/Utils/" --sources "$SRCROOT" --templates "$PODS_ROOT/PredicateFlow/PredicateFlow/Templates/PredicateFlow.stencil" --output "$SRCROOT/PredicateFlow.generated.swift"
    ```
 4. Build your project. In Finder you will now see a `PredicateFlow.generated.swift` in the `$SRCROOT`-folder, drag the `PredicateFlow.generated.swift` files into your project and **uncheck** `Copy items if needed`
 
