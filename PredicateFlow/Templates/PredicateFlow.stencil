@@ -1,0 +1,71 @@
+import PredicateFlow
+
+{% for type in types.implementing.PredicateSchema %}
+/// The "{{ type.name }}" Predicate Schema
+{{ type.accessLevel }} struct {{ type.name }}Schema: GeneratedPredicateSchema {
+    
+    /// USE THIS ONLY TO ADD A PREDICATEPROPERTY MANUALLY THROUGH EXTENSION!
+    {{ type.accessLevel }} private(set) var compoundFieldBuilder: CompoundFieldBuilder
+
+    /// DO NOT USE THIS INIT DIRECTLY!
+    {{ type.accessLevel }} init(compoundFieldBuilder: CompoundFieldBuilder) {
+        self.compoundFieldBuilder = compoundFieldBuilder
+    }
+
+    /// The class/struct name
+    {{ type.accessLevel }} static let entityName = "{{ type.name }}"
+
+{% for variable in type.storedVariables %}
+{% if variable.isArray %}
+{% if variable.typeName.array.elementType.implements.PredicateSchema %}
+    /// "{{ variable.name }}" property
+    {{ type.accessLevel }} var {{ variable.name }}: CollectionProperty<{{ variable.typeName.array.elementTypeName }}Schema> { 
+        return CollectionProperty<{{ variable.typeName.array.elementTypeName }}Schema>("{{ variable.name }}", compoundFieldBuilder) 
+    }
+    /// "{{ variable.name }}" property for static access
+    {{ type.accessLevel }} static var {{ variable.name }}: CollectionProperty<{{ variable.typeName.array.elementTypeName }}Schema> { 
+        return {{ type.name }}Schema().{{ variable.name }} 
+    }
+{% else %}
+    /// "{{ variable.name }}" property
+    {{ type.accessLevel }} var {{ variable.name }}: CollectionProperty<{{ variable.typeName.array.elementTypeName }}> { 
+        return CollectionProperty<{{ variable.typeName.array.elementTypeName }}>("{{ variable.name }}", compoundFieldBuilder)
+    }
+    /// "{{ variable.name }}" property for static access
+    {{ type.accessLevel }} static var {{ variable.name }}: CollectionProperty<{{ variable.typeName.array.elementTypeName }}> {
+        return {{ type.name }}Schema().{{ variable.name }} 
+    }
+{% endif %}
+{% elif variable.type.implements.PredicateSchema %}
+    /// "{{ variable.name }}" property
+    {{ type.accessLevel }} var {{ variable.name }}: ObjectProperty<{{ variable.type.name }}Schema> { 
+        return ObjectProperty<{{ variable.type.name }}Schema>("{{ variable.name }}", compoundFieldBuilder) 
+    }
+    /// "{{ variable.name }}" property for static access
+    {{ type.accessLevel }} static var {{ variable.name }}: ObjectProperty<{{ variable.type.name }}Schema> { 
+        return {{ type.name }}Schema().{{ variable.name }} 
+    }
+{% elif variable.typeName|contains:"Bool" %}
+    /// "{{ variable.name }}" property
+    {{ type.accessLevel }} var {{ variable.name }}: BoolPredicateProperty { 
+        return BoolPredicateProperty("{{ variable.name }}", compoundFieldBuilder) 
+    }
+    /// "{{ variable.name }}" property for static access
+    {{ type.accessLevel }} static var {{ variable.name }}: BoolPredicateProperty { 
+        return {{ type.name }}Schema().{{ variable.name }} 
+    }
+{% elif variable.typeName|contains:"String" or variable.typeName|contains:"Date" or variable.typeName|contains:"Int"  or variable.typeName|contains:"Float" or variable.typeName|contains:"Double" %}
+    /// "{{ variable.name }}" property
+    {{ type.accessLevel }} var {{ variable.name }}: PredicateProperty<{% if variable.type != nil %}{{ variable.type.name }}{% else %}{{ variable.unwrappedTypeName }}{% endif %}> { 
+        return PredicateProperty<{% if variable.type != nil %}{{ variable.type.name }}{% else %}{{ variable.unwrappedTypeName }}{% endif %}>("{{ variable.name }}", compoundFieldBuilder) 
+    }
+    /// "{{ variable.name }}" property for static access
+    {{ type.accessLevel }} static var {{ variable.name }}: PredicateProperty<{% if variable.type != nil %}{{variable.type.name}}{% else %}{{ variable.unwrappedTypeName }}{% endif %}> { 
+        return {{ type.name }}Schema().{{ variable.name }} 
+    }
+{% else %}
+    // ❗ Error generating PredicateProperty for "{{ variable.name }}"
+{% endif %}
+{% endfor %}
+}
+{% endfor %}

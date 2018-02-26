@@ -1,42 +1,27 @@
-#
-# Be sure to run `pod lib lint PredicateFlow.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = 'PredicateFlow'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of PredicateFlow.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.summary          = 'Flowable NSPredicate. Written in Swift.'
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+			            PredicateFlow is a builder that allows you to write amazing, strong-typed and easy-to-read NSPredicate.
                        DESC
 
-  s.homepage         = 'https://github.com/Andrea Del Fante/PredicateFlow'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/andreadelfante/PredicateFlow'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Andrea Del Fante' => 'andreadelfante94@gmail.com' }
-  s.source           = { :git => 'https://github.com/Andrea Del Fante/PredicateFlow.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'andreadelfante' => 'andreadelfante94@gmail.com' }
+  s.requires_arc     = true
+  s.source           = { :git => 'https://github.com/andreadelfante/PredicateFlow.git', :tag => s.version.to_s }
+
+  s.swift_version = '4.0'
 
   s.ios.deployment_target = '8.0'
+  s.osx.deployment_target = '10.9'
+  s.tvos.deployment_target = '9.0'
+  s.watchos.deployment_target = '2.0'
 
   s.source_files = 'PredicateFlow/Classes/**/*'
+  s.preserve_paths = [ 'PredicateFlow/Templates', 'PredicateFlow/Classes/Utils' ]
   
-  # s.resource_bundles = {
-  #   'PredicateFlow' => ['PredicateFlow/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'Sourcery', '~> 0.10.1'
 end
