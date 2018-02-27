@@ -16,6 +16,7 @@ import PredicateFlow
     {{ type.accessLevel }} static let entityName = "{{ type.name }}"
 
 {% for variable in type.storedVariables %}
+    ///{{variable.unwrappedTypeName}}
 {% if variable.isArray %}
 {% if variable.typeName.array.elementType.implements.PredicateSchema %}
     /// "{{ variable.name }}" property
@@ -45,7 +46,16 @@ import PredicateFlow
     {{ type.accessLevel }} static var {{ variable.name }}: ObjectProperty<{{ variable.type.name }}Schema> { 
         return {{ type.name }}Schema().{{ variable.name }} 
     }
-{% elif variable.typeName|contains:"Bool" %}
+{% elif variable.type != nil %}
+    /// "{{ variable.name }}" property
+    {{ type.accessLevel }} var {{ variable.name }}: PredicateProperty<{{ variable.type.name }}> { 
+        return PredicateProperty<{{ variable.type.name }}>("{{ variable.name }}", compoundFieldBuilder) 
+    }
+    /// "{{ variable.name }}" property for static access
+    {{ type.accessLevel }} static var {{ variable.name }}: PredicateProperty<{{ variable.type.name }}> { 
+        return {{ type.name }}Schema().{{ variable.name }} 
+    }
+{% elif variable.unwrappedTypeName == "Bool" %}
     /// "{{ variable.name }}" property
     {{ type.accessLevel }} var {{ variable.name }}: BoolPredicateProperty { 
         return BoolPredicateProperty("{{ variable.name }}", compoundFieldBuilder) 
@@ -54,17 +64,17 @@ import PredicateFlow
     {{ type.accessLevel }} static var {{ variable.name }}: BoolPredicateProperty { 
         return {{ type.name }}Schema().{{ variable.name }} 
     }
-{% elif variable.typeName|contains:"String" or variable.typeName|contains:"Date" or variable.typeName|contains:"Int"  or variable.typeName|contains:"Float" or variable.typeName|contains:"Double" %}
+{% elif variable.unwrappedTypeName == "Int" or variable.unwrappedTypeName == "Float" or variable.unwrappedTypeName == "Double" or variable.unwrappedTypeName == "Date" or variable.unwrappedTypeName == "String" or variable.unwrappedTypeName == "UInt" or variable.unwrappedTypeName == "Int8" or variable.unwrappedTypeName == "UInt8" or variable.unwrappedTypeName == "Int16" or variable.unwrappedTypeName == "UInt16" or variable.unwrappedTypeName == "Int32" or variable.unwrappedTypeName == "UInt32" or variable.unwrappedTypeName == "Int64" or variable.unwrappedTypeName == "UInt64" %}
     /// "{{ variable.name }}" property
-    {{ type.accessLevel }} var {{ variable.name }}: PredicateProperty<{% if variable.type != nil %}{{ variable.type.name }}{% else %}{{ variable.unwrappedTypeName }}{% endif %}> { 
-        return PredicateProperty<{% if variable.type != nil %}{{ variable.type.name }}{% else %}{{ variable.unwrappedTypeName }}{% endif %}>("{{ variable.name }}", compoundFieldBuilder) 
+    {{ type.accessLevel }} var {{ variable.name }}: PredicateProperty<{{ variable.unwrappedTypeName }}> { 
+        return PredicateProperty<{{ variable.unwrappedTypeName }}>("{{ variable.name }}", compoundFieldBuilder) 
     }
     /// "{{ variable.name }}" property for static access
-    {{ type.accessLevel }} static var {{ variable.name }}: PredicateProperty<{% if variable.type != nil %}{{variable.type.name}}{% else %}{{ variable.unwrappedTypeName }}{% endif %}> { 
+    {{ type.accessLevel }} static var {{ variable.name }}: PredicateProperty<{{ variable.unwrappedTypeName }}> { 
         return {{ type.name }}Schema().{{ variable.name }} 
     }
 {% else %}
-    // ❗ Error generating PredicateProperty for "{{ variable.name }}"
+    // ❗ Error generating PredicateProperty for "{{ variable.name }}" [type: {{ variable.unwrappedTypeName }}]
 {% endif %}
 {% endfor %}
 }

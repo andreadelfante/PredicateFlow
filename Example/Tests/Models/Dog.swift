@@ -12,5 +12,6 @@ class Dog: PredicateSchema {
 	
 	private var name: String = ""
 	private var age: Int = 0
+	private var isHungry: Bool = false
 	private var owner: Person?
 }
