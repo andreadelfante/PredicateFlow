@@ -5,7 +5,7 @@ Write amazing, strong-typed and easy-to-read NSPredicate, allowing you to write 
 ## Supported platforms
 
 * iOS 8.0+
-* Mac OS X 10.9+
+* macOS 10.9+
 * tvOS 9.0+
 * watchOS 2.0+
 
@@ -137,6 +137,23 @@ DogSchema.owner.element().dogs.keyPath()
 // Legacy mode:
 // "age"
 // "owner.dogs"
+```
+
+## PredicateFlow/Realm
+
+If you want to use flowable and strong-typed queries in [Realm](https://github.com/realm/realm-cocoa), add `pod 'PredicateFlow/Realm'` to your [Podfile](http://cocoapods.org/#get_started) and run `pod install`.
+```swift
+let realm = try! Realm()
+realm.objects(Dog.self)
+    .filter(DogSchema.age.isGreater(than: 10))
+    .filter(DogSchema.isHungry.isTrue)
+    .sorted(DogSchema.age.ascending())
+    
+// Legacy mode:
+realm.objects(Dog.self)
+    .filter("age > %@", 10)
+    .filter("isHungry == %@", true)
+    .sorted("age", ascending: true)
 ```
 
 ## License

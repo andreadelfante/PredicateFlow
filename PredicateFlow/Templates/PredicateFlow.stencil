@@ -16,7 +16,6 @@ import PredicateFlow
     {{ type.accessLevel }} static let entityName = "{{ type.name }}"
 
 {% for variable in type.storedVariables %}
-    ///{{variable.unwrappedTypeName}}
 {% if variable.isArray %}
 {% if variable.typeName.array.elementType.implements.PredicateSchema %}
     /// "{{ variable.name }}" property
