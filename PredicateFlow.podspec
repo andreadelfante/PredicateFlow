@@ -28,6 +28,6 @@ Pod::Spec.new do |pf|
   pf.subspec 'Realm' do |realm|
     realm.source_files = [ 'PredicateFlow/Classes/**/*', 'PredicateFlow-Realm/Classes/**/*' ]
     
-    realm.dependency 'RealmSwift', '~> 3.1.1'
+    realm.dependency 'RealmSwift'
   end
 end
