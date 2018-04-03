@@ -23,9 +23,12 @@ before_install:
   - cd "Example"
   - pod repo update
 
+install:
+  - pod install
+
 before_script:
   - cd "../"
-  
+
 script:
   - set -o pipefail
   - xcodebuild -version
