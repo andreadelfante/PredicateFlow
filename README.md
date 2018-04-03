@@ -1,5 +1,8 @@
 # PredicateFlow
 
+[![Build Status](https://travis-ci.org/andreadelfante/PredicateFlow.svg?branch=master)](https://travis-ci.org/andreadelfante/PredicateFlow)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/PredicateFlow.svg)](https://cocoapods.org/pods/PredicateFlow)
+
 Write amazing, strong-typed and easy-to-read NSPredicate, allowing you to write flowable NSPredicate, without guessing attribution names, predicate operation or writing wrong arguments type.
 
 ## Supported platforms
