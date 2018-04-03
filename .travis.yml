@@ -17,7 +17,8 @@ env:
     - RUN_TESTS="YES" POD_LINT="YES"
 before_install:
   - gem install cocoapods
-  - pod update
+  - cd "Example"
+  - pod repo update
 script:
   - set -o pipefail
   - xcodebuild -version
