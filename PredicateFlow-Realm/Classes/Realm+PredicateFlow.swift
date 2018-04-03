@@ -43,6 +43,10 @@ extension Results {
 	public func value(_ predicateField: PredicateField) -> Any? {
 		return value(forKeyPath: predicateField.keyPath())
 	}
+    
+    public func distinct(_ predicateFields: PredicateField...) -> Results<Element> {
+        return distinct(by: predicateFields.map { $0.keyPath() })
+    }
 }
 
 extension List {

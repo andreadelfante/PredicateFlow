@@ -63,7 +63,16 @@ import PredicateFlow
     {{ type.accessLevel }} static var {{ variable.name }}: BoolPredicateProperty { 
         return {{ type.name }}Schema().{{ variable.name }} 
     }
-{% elif variable.unwrappedTypeName == "Int" or variable.unwrappedTypeName == "Float" or variable.unwrappedTypeName == "Double" or variable.unwrappedTypeName == "Date" or variable.unwrappedTypeName == "String" or variable.unwrappedTypeName == "UInt" or variable.unwrappedTypeName == "Int8" or variable.unwrappedTypeName == "UInt8" or variable.unwrappedTypeName == "Int16" or variable.unwrappedTypeName == "UInt16" or variable.unwrappedTypeName == "Int32" or variable.unwrappedTypeName == "UInt32" or variable.unwrappedTypeName == "Int64" or variable.unwrappedTypeName == "UInt64" %}
+{% elif variable.unwrappedTypeName == "String" %}
+    /// "{{ variable.name }}" property
+    {{ type.accessLevel }} var {{ variable.name }}: StringPredicateProperty {
+        return StringPredicateProperty("{{ variable.name }}", compoundFieldBuilder)
+    }
+    /// "{{ variable.name }}" property for static access
+    {{ type.accessLevel }} static var {{ variable.name }}: StringPredicateProperty {
+        return {{ type.name }}Schema().{{ variable.name }}
+    }
+{% elif variable.unwrappedTypeName == "Int" or variable.unwrappedTypeName == "Float" or variable.unwrappedTypeName == "Double" or variable.unwrappedTypeName == "Date" or variable.unwrappedTypeName == "UInt" or variable.unwrappedTypeName == "Int8" or variable.unwrappedTypeName == "UInt8" or variable.unwrappedTypeName == "Int16" or variable.unwrappedTypeName == "UInt16" or variable.unwrappedTypeName == "Int32" or variable.unwrappedTypeName == "UInt32" or variable.unwrappedTypeName == "Int64" or variable.unwrappedTypeName == "UInt64" %}
     /// "{{ variable.name }}" property
     {{ type.accessLevel }} var {{ variable.name }}: PredicateProperty<{{ variable.unwrappedTypeName }}> { 
         return PredicateProperty<{{ variable.unwrappedTypeName }}>("{{ variable.name }}", compoundFieldBuilder) 

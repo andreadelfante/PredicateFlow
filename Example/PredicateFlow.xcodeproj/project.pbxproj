@@ -129,7 +129,6 @@
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
 				ABDF89908944533FE44B68A8 /* [CP] Embed Pods Frameworks */,
-				61FD4E9E26EDB7AB9CC39049 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,21 +187,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		61FD4E9E26EDB7AB9CC39049 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PredicateFlow_Tests/Pods-PredicateFlow_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		914BF26C20409C9000C835D3 /* PredicateFlow */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -215,7 +199,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/Sourcery/bin/sourcery\" --sources \"$SRCROOT/Tests\" --templates \"$SRCROOT/Tests/PredicateFlow.stencil\" --output \"$SRCROOT/Tests/Models/PredicateFlow.generated.swift\" --disableCache";
+			shellScript = "echo \"$SRCROOT/Tests/PredicateFlow.stencil\" \n\"$PODS_ROOT/Sourcery/bin/sourcery\" --sources \"$SRCROOT/Tests\" --templates \"$SRCROOT/Tests/PredicateFlow.stencil\" --output \"$SRCROOT/Tests/Models/PredicateFlow.generated.swift\" --disableCache";
 		};
 		9A57FEA9A39798F307051D72 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

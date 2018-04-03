@@ -55,7 +55,7 @@ public final class PredicateBuilder {
 	- returns: self for chaining.
 	*/
     public func and(_ predicate: NSPredicate) -> Self {
-        self.predicate = NSCompoundPredicate.init(andPredicateWithSubpredicates: [self.predicate, predicate])
+        self.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [self.predicate, predicate])
         return self
     }
 
@@ -68,6 +68,41 @@ public final class PredicateBuilder {
 	*/
     public func and(_ predicateQuery: PredicateResult) -> Self {
         return and(predicateQuery.query())
+    }
+    
+    /**
+     Compound prev predicate with another one, using AND NOT.
+     
+     - parameter format: a string format.
+     - parameter args: an args array.
+     
+     - returns: self for chaining.
+     */
+    public func andNot(_ format: String, _ args: Any...) -> Self {
+        return andNot(NSPredicate(format: format, args))
+    }
+    
+    /**
+     Compound prev predicate with another one, using AND NOT.
+     
+     - parameter predicate: an NSPredicate.
+     
+     - returns: self for chaining.
+     */
+    public func andNot(_ predicate: NSPredicate) -> Self {
+        let notPredicate = NSCompoundPredicate(notPredicateWithSubpredicate: predicate)
+        return and(notPredicate)
+    }
+    
+    /**
+     Compound prev predicate with another one, using AND NOT.
+     
+     - parameter predicateQuery: a PredicateResult.
+     
+     - returns: self for chaining.
+     */
+    public func andNot(_ predicateQuery: PredicateResult) -> Self {
+        return andNot(predicateQuery.query())
     }
 
 	/**
@@ -90,7 +125,7 @@ public final class PredicateBuilder {
 	- returns: self for chaining.
 	*/
     public func or(_ predicate: NSPredicate) -> Self {
-        self.predicate = NSCompoundPredicate.init(orPredicateWithSubpredicates: [self.predicate, predicate])
+        self.predicate = NSCompoundPredicate(orPredicateWithSubpredicates: [self.predicate, predicate])
         return self
     }
 
@@ -103,6 +138,41 @@ public final class PredicateBuilder {
 	*/
     public func or(_ predicateQuery: PredicateResult) -> Self {
         return or(predicateQuery.query())
+    }
+    
+    /**
+     Compound prev predicate with another one, using OR NOT.
+     
+     - parameter format: a string format.
+     - parameter args: an args array.
+     
+     - returns: self for chaining.
+     */
+    public func orNot(_ format: String, _ args: Any...) -> Self {
+        return orNot(NSPredicate(format: format, args))
+    }
+    
+    /**
+     Compound prev predicate with another one, using OR NOT.
+     
+     - parameter predicate: an NSPredicate.
+     
+     - returns: self for chaining.
+     */
+    public func orNot(_ predicate: NSPredicate) -> Self {
+        let notPredicate = NSCompoundPredicate(notPredicateWithSubpredicate: predicate)
+        return or(notPredicate)
+    }
+    
+    /**
+     Compound prev predicate with another one, using OR NOT.
+     
+     - parameter predicateQuery: a PredicateResult.
+     
+     - returns: self for chaining.
+     */
+    public func orNot(_ predicateQuery: PredicateResult) -> Self {
+        return orNot(predicateQuery.query())
     }
 
 	/**
@@ -120,38 +190,65 @@ public final class PredicateBuilder {
     }
 	
 	/**
-	Alias of query().
+	Alias of build().
 	*/
 	public func query() -> NSPredicate {
 		return build()
 	}
 }
 
+infix operator &&!
+infix operator ||!
+
 public extension PredicateBuilder {
 	
 	public static func &&(lhs: PredicateBuilder, rhs: PredicateResult) -> PredicateBuilder {
 		return lhs.and(rhs)
 	}
+    
+    public static func &&!(lhs: PredicateBuilder, rhs: PredicateResult) -> PredicateBuilder {
+        return lhs.andNot(rhs)
+    }
 	
 	public static func ||(lhs: PredicateBuilder, rhs: PredicateResult) -> PredicateBuilder {
 		return lhs.or(rhs)
 	}
+    
+    public static func ||!(lhs: PredicateBuilder, rhs: PredicateResult) -> PredicateBuilder {
+        return lhs.orNot(rhs)
+    }
 	
 	public static func &&(lhs: PredicateBuilder, rhs: (String, [Any])) -> PredicateBuilder {
 		return lhs.and(rhs.0, rhs.1)
 	}
+    
+    public static func &&!(lhs: PredicateBuilder, rhs: (String, [Any])) -> PredicateBuilder {
+        return lhs.andNot(rhs.0, rhs.1)
+    }
 	
 	public static func ||(lhs: PredicateBuilder, rhs: (String, [Any])) -> PredicateBuilder {
 		return lhs.or(rhs.0, rhs.1)
 	}
+    
+    public static func ||!(lhs: PredicateBuilder, rhs: (String, [Any])) -> PredicateBuilder {
+        return lhs.orNot(rhs.0, rhs.1)
+    }
 	
 	public static func &&(lhs: PredicateBuilder, rhs: NSPredicate) -> PredicateBuilder {
 		return lhs.and(rhs)
 	}
+    
+    public static func &&!(lhs: PredicateBuilder, rhs: NSPredicate) -> PredicateBuilder {
+        return lhs.andNot(rhs)
+    }
 	
 	public static func ||(lhs: PredicateBuilder, rhs: NSPredicate) -> PredicateBuilder {
 		return lhs.or(rhs)
 	}
+    
+    public static func ||!(lhs: PredicateBuilder, rhs: NSPredicate) -> PredicateBuilder {
+        return lhs.orNot(rhs)
+    }
 }
 
 public extension NSPredicate {
