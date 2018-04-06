@@ -1,7 +1,7 @@
 # PredicateFlow
 
-![Build Status](https://travis-ci.org/andreadelfante/PredicateFlow.svg?branch=master)](https://travis-ci.org/andreadelfante/PredicateFlow)
-![CocoaPods Compatible](https://img.shields.io/cocoapods/v/PredicateFlow.svg)](https://cocoapods.org/pods/PredicateFlow)
+[![Build Status](https://travis-ci.org/andreadelfante/PredicateFlow.svg?branch=master)](https://travis-ci.org/andreadelfante/PredicateFlow)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/PredicateFlow.svg)](https://cocoapods.org/pods/PredicateFlow)
 ![License](https://img.shields.io/cocoapods/l/PredicateFlow.svg?style=flat)
 ![Platform](https://img.shields.io/cocoapods/p/PredicateFlow.svg?style=flat)
 
