@@ -1,6 +1,6 @@
 Pod::Spec.new do |pf|
   pf.name             = 'PredicateFlow'
-  pf.version          = '0.3.2'
+  pf.version          = '1.0'
   pf.summary          = 'Flowable NSPredicate. Written in Swift.'
 
   pf.description      = <<-DESC
@@ -23,7 +23,7 @@ Pod::Spec.new do |pf|
   pf.source_files = 'PredicateFlow/Classes/**/*'
   pf.preserve_paths = [ 'PredicateFlow/Templates', 'PredicateFlow/Classes/Utils' ]
   
-  pf.dependency 'Sourcery', '~> 0.12.0'
+  pf.dependency 'Sourcery', '~> 0.13.0'
 
   pf.subspec 'Realm' do |realm|
     realm.source_files = [ 'PredicateFlow/Classes/**/*', 'PredicateFlow-Realm/Classes/**/*' ]

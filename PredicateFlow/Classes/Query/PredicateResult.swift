@@ -55,3 +55,42 @@ internal struct ConcretePredicateResult: PredicateResult {
 		return NSPredicate(format: stringFormat, argumentArray: arguments)
 	}
 }
+
+class CompoundPredicateResult: CompoundablePredicateResult, PredicateResult {
+    
+    private(set) var stringFormat: String
+    private(set) var arguments: [Any]
+    
+    init(_ predicateQuery: PredicateResult) {
+        self.stringFormat = predicateQuery.stringFormat
+        self.arguments = predicateQuery.arguments
+    }
+    
+    func and(_ predicateQuery: PredicateResult) -> Self {
+        stringFormat = "\(stringFormat) AND \(predicateQuery.stringFormat)"
+        arguments.append(contentsOf: predicateQuery.arguments)
+        return self
+    }
+    
+    func andNot(_ predicateQuery: PredicateResult) -> Self {
+        stringFormat = "\(stringFormat) AND NOT \(predicateQuery.stringFormat)"
+        arguments.append(contentsOf: predicateQuery.arguments)
+        return self
+    }
+    
+    func or(_ predicateQuery: PredicateResult) -> Self {
+        stringFormat = "\(stringFormat) OR \(predicateQuery.stringFormat)"
+        arguments.append(contentsOf: predicateQuery.arguments)
+        return self
+    }
+    
+    func orNot(_ predicateQuery: PredicateResult) -> Self {
+        stringFormat = "\(stringFormat) OR NOT \(predicateQuery.stringFormat)"
+        arguments.append(contentsOf: predicateQuery.arguments)
+        return self
+    }
+    
+    var predicate: NSPredicate {
+        return NSPredicate(format: stringFormat, argumentArray: arguments)
+    }
+}

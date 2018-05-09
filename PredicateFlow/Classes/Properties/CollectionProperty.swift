@@ -172,8 +172,6 @@ public extension CollectionProperty where T: GeneratedPredicateSchema {
 	}
 	
 	/**
-	**BETA**
-	
 	Begin a subquery in this collection property.
 	
 	- parameter subquery: The subquery element.
@@ -181,8 +179,22 @@ public extension CollectionProperty where T: GeneratedPredicateSchema {
 	- returns: A collection property.
 	*/
 	public func subquery(_ subquery: (SubqueryProperty<T>) -> PredicateResult) -> CollectionProperty<T> {
-		return SubQuery(self, subquery).execute()
+        let property = SubqueryProperty<T>("\(arc4random())")
+        return SubQuery(self, subqueryProperty: property, subquery(property)).execute()
 	}
+    
+    /**
+     Begin a subquery in this collection property.
+     
+     - parameter variableName: The name of the element.
+     - parameter subquery: The subquery element.
+     
+     - returns: A collection property.
+     */
+    public func subquery(_ variableName: String, _ subquery: (SubqueryProperty<T>) -> PredicateResult) -> CollectionProperty<T> {
+        let property = SubqueryProperty<T>(variableName)
+        return SubQuery(self, subqueryProperty: property, subquery(property)).execute()
+    }
 }
 
 public extension CollectionProperty where T == String {
