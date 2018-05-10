@@ -5,7 +5,7 @@
 ![License](https://img.shields.io/cocoapods/l/PredicateFlow.svg?style=flat)
 ![Platform](https://img.shields.io/cocoapods/p/PredicateFlow.svg?style=flat)
 
-Write amazing, strong-typed and easy-to-read NSPredicate, allowing you to write flowable NSPredicate, without guessing attribution names, predicate operation or writing wrong arguments type.
+Write amazing, strong-typed and easy-to-read NSPredicate. This library allows you to write flowable NSPredicate, without guessing attribution names, predicate operation or writing wrong arguments type.
 
 ## Supported platforms
 
@@ -15,7 +15,7 @@ Write amazing, strong-typed and easy-to-read NSPredicate, allowing you to write 
 * watchOS 2.0+
 
 ## Installation
-[CocoaPods](http://cocoapods.org) is actually the only way of installation.
+[CocoaPods](http://cocoapods.org) is actually the only way to install it.
 
 ### Cocoapods
 
@@ -134,7 +134,7 @@ PredicateBuilder(DogSchema.age.isGreater(than: 10))
 // NSPredicate("age > %@ AND isHungry == %@ AND age BETWEEN %@ AND owner.name == %@ OR owner.dogs.@max.age > %@ OR ANY owner.dogs.name == %@", 10, true, [1, 10], "Foo", 10, "Foo")
 ```
 
-PredicateFlow can also build key path, and you can use it to get a strong-typed one.
+PredicateFlow can also build KeyPaths, and you can use it to get a strong-typed one.
 ```swift
 DogSchema.age.keyPath()
 DogSchema.owner.element().dogs.keyPath()
