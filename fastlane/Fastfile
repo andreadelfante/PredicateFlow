@@ -16,7 +16,7 @@ platform :ios do
   lane :swiftlinting do
     swiftlint(
       mode: :lint,
-      executable: "Pods/SwiftLint/swiftlint",
+      executable: "Example/Pods/SwiftLint/swiftlint",
       files: [
         "PredicateFlow/**/*.swift",
         "PredicateFlow-Realm/**/*.swift"
