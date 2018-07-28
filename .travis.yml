@@ -12,18 +12,10 @@ env:
 
 cache:
   bundler: true
-  directories:
-  - Example/Pods
-  - Example/*.lock
-  - Example/*.xcworkspace
+  cocoapods: true
 
 jobs:
   include:
-    - stage: prepare
-      script: 
-        - bundle install
-        - rm -rf Example/Pods Example/*.lock Example/*.xcworkspace
-        - bundle exec fastlane prepare
     - stage: lint
       script: 
         - bundle exec fastlane swiftlinting
