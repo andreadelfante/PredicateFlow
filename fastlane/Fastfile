@@ -46,10 +46,8 @@ platform :ios do
       config: ".jazzy.yaml"
     )
 
-    git_commit(
-      path: "docs",
-      message: "Update docs folder"
-    )
+    git_add(path: "docs")
+    git_commit(message: "Update docs folder")
     git_push
   end
 
