@@ -9,8 +9,8 @@ cocoapods(
 
 platform :ios do
 
-  desc "Swift linting..."
-  lane :swiftlinting do
+  desc "Linting..."
+  lane :linting do
     ["PredicateFlow", "PredicateFlow-Realm"].each do |path|
       swiftlint(
         mode: :lint,
@@ -20,10 +20,7 @@ platform :ios do
         ignore_exit_status: true
       )
     end
-  end
-
-  desc "Pod linting..."
-  lane :podlinting do
+    
     pod_lib_lint(
       verbose: true,
       quick: true
