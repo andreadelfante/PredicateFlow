@@ -1,0 +1,37 @@
+PODS:
+  - PredicateFlow (1.0.1):
+    - PredicateFlow/Realm (= 1.0.1)
+    - Sourcery (~> 0.13.0)
+  - PredicateFlow/Realm (1.0.1):
+    - RealmSwift
+    - Sourcery (~> 0.13.0)
+  - Realm (3.7.5):
+    - Realm/Headers (= 3.7.5)
+  - Realm/Headers (3.7.5)
+  - RealmSwift (3.7.5):
+    - Realm (= 3.7.5)
+  - Sourcery (0.13.1)
+
+DEPENDENCIES:
+  - PredicateFlow (from `../`)
+  - PredicateFlow/Realm (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Realm
+    - RealmSwift
+    - Sourcery
+
+EXTERNAL SOURCES:
+  PredicateFlow:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PredicateFlow: 4d22be0be91046e4efca1a32f27a899febdaa590
+  Realm: c286caf4dbf346ce24aad49ca76c7ce622d4a082
+  RealmSwift: 2a9281e37d6de55f66f76254d49d28aeb1b729e4
+  Sourcery: 9ef51b8777516f204d82996441f293813158d0d7
+
+PODFILE CHECKSUM: a7c6b04fc7664d0f1b3934d095cb399c0abfcfa9
+
+COCOAPODS: 1.5.3

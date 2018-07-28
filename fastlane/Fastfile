@@ -1,0 +1,72 @@
+default_platform(:ios)
+
+setup_travis
+
+platform :ios do
+
+  desc "Install pods and other fun things"
+  lane :prepare do
+    cocoapods(
+      podfile: "./Example/Podfile",
+      try_repo_update_on_error: true
+    )
+  end
+
+  desc "Swift linting..."
+  lane :swiftlinting do
+    swiftlint(
+      mode: :lint,
+      executable: "Pods/SwiftLint/swiftlint",
+      files: [
+        "PredicateFlow/**/*.swift",
+        "PredicateFlow-Realm/**/*.swift"
+      ],
+      quiet: true,
+      ignore_exit_status: true
+    )
+  end
+
+  desc "Pod linting..."
+  lane :podlinting do
+    pod_lib_lint(
+      verbose: true,
+      quick: true
+    )
+  end
+
+  desc "Run tests for PredicateFlow"
+  lane :test do
+    run_tests(
+      devices: [
+        "iPhone X",
+        "iPhone 6s"
+      ],
+      workspace: "Example/PredicateFlow.xcworkspace",
+      scheme: "PredicateFlow-Example",
+      code_coverage: true,
+      skip_slack: true
+    )
+  end
+
+  desc "Create documentation"
+  lane :documentation do
+    jazzy(
+      config: ".jazzy.yaml"
+    )
+
+    git_commit(
+      path: "docs",
+      message: "Update docs folder"
+    )
+    git_push
+  end
+
+  desc "Deploy to Cocoapods"
+  lane :deploy do
+    version = read_podspec['version']
+    add_git_tag(tag: version)
+    push_git_tags
+
+    pod_push
+  end
+end
