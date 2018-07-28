@@ -12,6 +12,8 @@ platform :ios do
   desc "Linting..."
   lane :linting do
     ["PredicateFlow", "PredicateFlow-Realm"].each do |path|
+      puts "Linting '#{path}'..."
+
       swiftlint(
         mode: :lint,
         executable: "Example/Pods/SwiftLint/swiftlint",
@@ -47,7 +49,10 @@ platform :ios do
     )
 
     git_add(path: "docs")
-    git_commit(message: "Update docs folder")
+    git_commit(
+      path: "docs",
+      message: "Update docs folder"
+    )
     git_push
   end
 
