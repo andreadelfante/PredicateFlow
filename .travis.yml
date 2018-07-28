@@ -10,12 +10,10 @@ env:
     - LC_CTYPE=en_US.UTF-8
     - LANG=en_US.UTF-8
 
-install:
-  - bundle install
-
 jobs:
   include:
     - stage: prepare
+      script: bundle install
       script: bundle exec fastlane prepare
     - stage: lint
       script: bundle exec fastlane swiftlinting
@@ -24,7 +22,9 @@ jobs:
       script: bundle exec fastlane test
     - stage: docs
       script: bundle exec fastlane documentation
-    - deploy:
+    - stage: deploy
+      script: skip
+      deploy:
         provider: script
         script: bundle exec fastlane deploy
         on:
