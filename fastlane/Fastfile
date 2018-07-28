@@ -53,7 +53,11 @@ platform :ios do
       path: "docs",
       message: "Update docs folder"
     )
-    push_to_git_remote
+
+    branch = git_branch
+    push_to_git_remote(
+      remote: branch
+    )
   end
 
   desc "Deploy to Cocoapods and push tag to master"
