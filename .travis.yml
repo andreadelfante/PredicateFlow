@@ -24,9 +24,8 @@ jobs:
       script: bundle exec fastlane test
     - stage: docs
       script: bundle exec fastlane documentation
-
-deploy:
-  provider: script
-  script: bundle exec fastlane deploy
-  on:
-    branch: master
+    - deploy:
+        provider: script
+        script: bundle exec fastlane deploy
+        on:
+          branch: master
