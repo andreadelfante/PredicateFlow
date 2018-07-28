@@ -31,7 +31,6 @@ platform :ios do
   lane :test do
     run_tests(
       devices: [
-        "iPhone X",
         "iPhone 6s"
       ],
       workspace: "Example/PredicateFlow.xcworkspace",

@@ -9,4 +9,4 @@ xcodebuild_arguments:
     - "-workspace"
     - "Example/PredicateFlow.xcworkspace"
     - "-scheme"
-    - "PredicateFlow"
+    - "PredicateFlow-Example"
