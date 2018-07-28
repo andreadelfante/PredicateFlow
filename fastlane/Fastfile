@@ -1,29 +1,25 @@
 default_platform(:ios)
 
 setup_travis
+cocoapods(
+  podfile: "./Example/Podfile",
+  try_repo_update_on_error: true
+)
+
 
 platform :ios do
 
-  desc "Install pods and other fun things"
-  lane :prepare do
-    cocoapods(
-      podfile: "./Example/Podfile",
-      try_repo_update_on_error: true
-    )
-  end
-
   desc "Swift linting..."
   lane :swiftlinting do
-    swiftlint(
-      mode: :lint,
-      executable: "Example/Pods/SwiftLint/swiftlint",
-      files: [
-        "PredicateFlow/**/*.swift",
-        "PredicateFlow-Realm/**/*.swift"
-      ],
-      quiet: true,
-      ignore_exit_status: true
-    )
+    ["PredicateFlow", "PredicateFlow-Realm"].each do |path|
+      swiftlint(
+        mode: :lint,
+        executable: "Example/Pods/SwiftLint/swiftlint",
+        path: path,
+        quiet: true,
+        ignore_exit_status: true
+      )
+    end
   end
 
   desc "Pod linting..."
