@@ -17,9 +17,7 @@ cache:
 jobs:
   include:
     - stage: lint
-      script: 
-        - bundle exec fastlane swiftlinting
-        - bundle exec fastlane podlinting
+      script: bundle exec fastlane linting
     - stage: test
       script: bundle exec fastlane test
     - stage: docs
