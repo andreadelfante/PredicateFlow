@@ -1,0 +1,12 @@
+author: andreadelfante
+author_url: https://twitter.com/a_delfante
+module: PredicateFlow
+output: docs
+theme: fullwidth
+clean: true
+
+xcodebuild_arguments:
+    - "-workspace"
+    - "Example/PredicateFlow.xcworkspace"
+    - "-scheme"
+    - "PredicateFlow"
