@@ -22,10 +22,8 @@ jobs:
       script: bundle exec fastlane test
     - stage: docs
       script: bundle exec fastlane documentation
+      if: branch = master
     - stage: deploy
-      script: skip
-      deploy:
-        provider: script
-        script: bundle exec fastlane deploy
-        on:
-          branch: master
+      script: bundle exec fastlane deploy
+      if: branch = master
+

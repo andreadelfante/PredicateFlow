@@ -42,7 +42,7 @@ platform :ios do
     )
   end
 
-  desc "Create documentation"
+  desc "Create documentation and push it to master"
   lane :documentation do
     jazzy(
       config: ".jazzy.yaml"
@@ -53,10 +53,10 @@ platform :ios do
       path: "docs",
       message: "Update docs folder"
     )
-    git_push
+    push_to_git_remote
   end
 
-  desc "Deploy to Cocoapods"
+  desc "Deploy to Cocoapods and push tag to master"
   lane :deploy do
     version = read_podspec['version']
     add_git_tag(tag: version)
