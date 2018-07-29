@@ -42,31 +42,39 @@ platform :ios do
     )
   end
 
-  desc "Create documentation and push it to master"
+  desc "Create documentation"
   lane :documentation do
     jazzy(
       config: ".jazzy.yaml"
     )
-
-    git_add(path: "docs")
-    git_commit(
-      path: "docs",
-      message: "Update docs folder"
-    )
-
+  end
+  
+  desc "Publish documentation"
+  lane :publish_doc do
     branch = git_branch
-    push_to_git_remote(
-      local_branch: branch,
-      remote_branch: branch,
+    commit_github_file(
+      repository_name: "andreadelfante/PredicateFlow",
+      api_token: ENV["GITHUB_TOKEN"],
+      message: "Update docs folder",
+      branch: branch,
+      path: "docs"
+    )
+  end
+  
+  desc "Mark a new release to GitHub"
+  lane :mark_tag_github do
+    version = read_podspec['version']
+    set_github_release(
+      repository_name: "andreadelfante/PredicateFlow",
+      api_token: ENV["GITHUB_TOKEN"],
+      name: version,
+      tag_name: version,
+      commitish: "master"
     )
   end
 
   desc "Deploy to Cocoapods and push tag to master"
   lane :deploy do
-    version = read_podspec['version']
-    add_git_tag(tag: version)
-    push_git_tags
-
     pod_push
   end
 end
