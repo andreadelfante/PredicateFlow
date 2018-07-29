@@ -56,7 +56,8 @@ platform :ios do
 
     branch = git_branch
     push_to_git_remote(
-      remote: branch
+      local_branch: branch,
+      remote_branch: branch,
     )
   end
 
