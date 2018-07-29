@@ -9,7 +9,6 @@ env:
   global:
     - LC_CTYPE=en_US.UTF-8
     - LANG=en_US.UTF-8
-    - GITHUB_TOKEN=954939114fd45216e7e1d451ee73e1cb3e9abc37
 
 cache:
   - bundler
@@ -21,14 +20,3 @@ jobs:
       script: bundle exec fastlane linting
     - stage: test
       script: bundle exec fastlane test
-    - stage: docs
-      script: 
-        - bundle exec fastlane documentation
-        - bundle exec fastlane publish_doc
-      if: branch = master
-    - stage: deploy
-      script: 
-        - bundle exec fastlane mark_tag_github 
-        - bundle exec fastlane deploy
-      if: branch = master
-
