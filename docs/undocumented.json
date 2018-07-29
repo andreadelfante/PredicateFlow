@@ -1,0 +1,341 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Properties/BoolPredicateProperty.swift",
+      "line": 29,
+      "symbol": "BoolPredicateProperty.==(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Properties/PredicateField.swift",
+      "line": 29,
+      "symbol": "PredicateField.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Properties/PredicateField.swift",
+      "line": 33,
+      "symbol": "PredicateField.debugDescription",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Query/PredicateResult.swift",
+      "line": 36,
+      "symbol": "PredicateResult.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Query/PredicateResult.swift",
+      "line": 40,
+      "symbol": "PredicateResult.debugDescription",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Query/Protocols/FlowComparable.swift",
+      "line": null,
+      "symbol": "FlowComparable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Query/Protocols/FlowComparable.swift",
+      "line": 10,
+      "symbol": "FlowComparable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Query/Protocols/FlowComparable.swift",
+      "line": 72,
+      "symbol": "FlowComparable.>(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Query/Protocols/FlowComparable.swift",
+      "line": 76,
+      "symbol": "FlowComparable.>=(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Query/Protocols/FlowComparable.swift",
+      "line": 80,
+      "symbol": "FlowComparable.<(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Query/Protocols/FlowComparable.swift",
+      "line": 84,
+      "symbol": "FlowComparable.<=(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Query/Protocols/FlowEquatable.swift",
+      "line": null,
+      "symbol": "FlowEquatable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Query/Protocols/FlowEquatable.swift",
+      "line": null,
+      "symbol": "FlowEquatable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Query/Protocols/FlowEquatable.swift",
+      "line": null,
+      "symbol": "FlowEquatable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Query/Protocols/FlowEquatable.swift",
+      "line": 10,
+      "symbol": "FlowEquatable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Query/Protocols/FlowEquatable.swift",
+      "line": 94,
+      "symbol": "FlowEquatable.==(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Query/Protocols/FlowEquatable.swift",
+      "line": 98,
+      "symbol": "FlowEquatable.!=(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Query/Protocols/FlowNillable.swift",
+      "line": 10,
+      "symbol": "FlowNillable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Query/Protocols/FlowStringComparable.swift",
+      "line": null,
+      "symbol": "FlowStringComparable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Query/Protocols/FlowStringComparable.swift",
+      "line": null,
+      "symbol": "FlowStringComparable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Query/Protocols/FlowStringComparable.swift",
+      "line": 10,
+      "symbol": "FlowStringComparable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Utils/CompoundablePredicate/CompoundablePredicate.swift",
+      "line": 127,
+      "symbol": "CompoundablePredicate.and(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Utils/CompoundablePredicate/CompoundablePredicate.swift",
+      "line": 131,
+      "symbol": "CompoundablePredicate.andNot(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Utils/CompoundablePredicate/CompoundablePredicate.swift",
+      "line": 135,
+      "symbol": "CompoundablePredicate.or(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Utils/CompoundablePredicate/CompoundablePredicate.swift",
+      "line": 139,
+      "symbol": "CompoundablePredicate.orNot(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Utils/CompoundablePredicate/CompoundablePredicate.swift",
+      "line": 149,
+      "symbol": "CompoundablePredicate.&&(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Utils/CompoundablePredicate/CompoundablePredicate.swift",
+      "line": 153,
+      "symbol": "CompoundablePredicate.&&!(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Utils/CompoundablePredicate/CompoundablePredicate.swift",
+      "line": 157,
+      "symbol": "CompoundablePredicate.||(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Utils/CompoundablePredicate/CompoundablePredicate.swift",
+      "line": 161,
+      "symbol": "CompoundablePredicate.||!(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Utils/CompoundablePredicate/CompoundablePredicate.swift",
+      "line": 165,
+      "symbol": "CompoundablePredicate.&&(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Utils/CompoundablePredicate/CompoundablePredicate.swift",
+      "line": 169,
+      "symbol": "CompoundablePredicate.&&!(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Utils/CompoundablePredicate/CompoundablePredicate.swift",
+      "line": 173,
+      "symbol": "CompoundablePredicate.||(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Utils/CompoundablePredicate/CompoundablePredicate.swift",
+      "line": 177,
+      "symbol": "CompoundablePredicate.||!(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Utils/CompoundablePredicate/CompoundablePredicate.swift",
+      "line": 181,
+      "symbol": "CompoundablePredicate.&&(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Utils/CompoundablePredicate/CompoundablePredicate.swift",
+      "line": 185,
+      "symbol": "CompoundablePredicate.&&!(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Utils/CompoundablePredicate/CompoundablePredicate.swift",
+      "line": 189,
+      "symbol": "CompoundablePredicate.||(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow/Classes/Utils/CompoundablePredicate/CompoundablePredicate.swift",
+      "line": 193,
+      "symbol": "CompoundablePredicate.||!(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow-Realm/Classes/Realm+PredicateFlow.swift",
+      "line": 13,
+      "symbol": "PredicateField.ascending()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow-Realm/Classes/Realm+PredicateFlow.swift",
+      "line": 17,
+      "symbol": "PredicateField.descending()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow-Realm/Classes/Realm+PredicateFlow.swift",
+      "line": 24,
+      "symbol": "SortDescriptor.init(_:ascending:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow-Realm/Classes/Realm+PredicateFlow.swift",
+      "line": 31,
+      "symbol": "Results.filter(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow-Realm/Classes/Realm+PredicateFlow.swift",
+      "line": 35,
+      "symbol": "Results.sorted(_:ascending:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow-Realm/Classes/Realm+PredicateFlow.swift",
+      "line": 39,
+      "symbol": "Results.sorted(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow-Realm/Classes/Realm+PredicateFlow.swift",
+      "line": 43,
+      "symbol": "Results.value(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow-Realm/Classes/Realm+PredicateFlow.swift",
+      "line": 47,
+      "symbol": "Results.distinct(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow-Realm/Classes/Realm+PredicateFlow.swift",
+      "line": 54,
+      "symbol": "List.filter(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow-Realm/Classes/Realm+PredicateFlow.swift",
+      "line": 58,
+      "symbol": "List.sorted(_:ascending:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/Desktop/PredicateFlow/PredicateFlow-Realm/Classes/Realm+PredicateFlow.swift",
+      "line": 62,
+      "symbol": "List.sorted(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/Andrea/Desktop/PredicateFlow"
+}

@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CollectionProperty Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/CollectionProperty" class="dashAnchor"></a>
+
+    <a title="CollectionProperty Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          PredicateFlow Docs
+        </a>
+         (81% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">PredicateFlow Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      CollectionProperty Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BasicComparisonQuery.html">BasicComparisonQuery</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BoolPredicateProperty.html">BoolPredicateProperty</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CollectionProperty.html">CollectionProperty</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/s:13PredicateFlow20CompoundFieldBuilderC">CompoundFieldBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CompoundablePredicateField.html">CompoundablePredicateField</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ObjectProperty.html">ObjectProperty</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PredicateBuilder.html">PredicateBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PredicateProperty.html">PredicateProperty</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/StringComparisonQuery.html">StringComparisonQuery</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/StringPredicateProperty.html">StringPredicateProperty</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/StringComparisonOption.html">StringComparisonOption</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/List.html">List</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Results.html">Results</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/SortDescriptor.html">SortDescriptor</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/CompoundablePredicate.html">CompoundablePredicate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/CompoundablePredicateResult.html">CompoundablePredicateResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/FlowComparable.html">FlowComparable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/FlowEquatable.html">FlowEquatable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/FlowNillable.html">FlowNillable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/FlowStringComparable.html">FlowStringComparable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/GeneratedPredicateSchema.html">GeneratedPredicateSchema</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/GroupingPredicate.html">GroupingPredicate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PredicateField.html">PredicateField</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PredicateQuery.html">PredicateQuery</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PredicateResult.html">PredicateResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:13PredicateFlow0A6SchemaP">PredicateSchema</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SubqueryProperty.html">SubqueryProperty</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>CollectionProperty</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CollectionProperty</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="../Classes/CompoundablePredicateField.html">CompoundablePredicateField</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>Defines a collection predicate property.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13PredicateFlow18CollectionPropertyC7isEmptyAA0A6Result_pv"></a>
+                    <a name="//apple_ref/swift/Property/isEmpty" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13PredicateFlow18CollectionPropertyC7isEmptyAA0A6Result_pv">isEmpty</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Convenience var to check if this collection property is empty.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isEmpty</span><span class="p">:</span> <span class="kt"><a href="../Protocols/PredicateResult.html">PredicateResult</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13PredicateFlow18CollectionPropertyC3avgAA20BasicComparisonQueryCySo8NSNumberCGyF"></a>
+                    <a name="//apple_ref/swift/Method/avg()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13PredicateFlow18CollectionPropertyC3avgAA20BasicComparisonQueryCySo8NSNumberCGyF">avg()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The average of the objects in this collection property.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">avg</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/BasicComparisonQuery.html">BasicComparisonQuery</a></span><span class="o">&lt;</span><span class="kt">NSNumber</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A basic comparison query.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13PredicateFlow18CollectionPropertyC5countAA20BasicComparisonQueryCySo8NSNumberCGyF"></a>
+                    <a name="//apple_ref/swift/Method/count()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13PredicateFlow18CollectionPropertyC5countAA20BasicComparisonQueryCySo8NSNumberCGyF">count()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The number of the objects in this collection property.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">count</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/BasicComparisonQuery.html">BasicComparisonQuery</a></span><span class="o">&lt;</span><span class="kt">NSNumber</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A basic comparison query.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13PredicateFlow18CollectionPropertyC3minAA20BasicComparisonQueryCySo8NSNumberCGyF"></a>
+                    <a name="//apple_ref/swift/Method/min()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13PredicateFlow18CollectionPropertyC3minAA20BasicComparisonQueryCySo8NSNumberCGyF">min()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The minimum value of the objects in this collection property.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">min</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/BasicComparisonQuery.html">BasicComparisonQuery</a></span><span class="o">&lt;</span><span class="kt">NSNumber</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A basic comparison query.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13PredicateFlow18CollectionPropertyC3maxAA20BasicComparisonQueryCySo8NSNumberCGyF"></a>
+                    <a name="//apple_ref/swift/Method/max()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13PredicateFlow18CollectionPropertyC3maxAA20BasicComparisonQueryCySo8NSNumberCGyF">max()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The maximum value of the objects in this collection property.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">max</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/BasicComparisonQuery.html">BasicComparisonQuery</a></span><span class="o">&lt;</span><span class="kt">NSNumber</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A basic comparison query.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13PredicateFlow18CollectionPropertyC3sumAA20BasicComparisonQueryCySo8NSNumberCGyF"></a>
+                    <a name="//apple_ref/swift/Method/sum()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13PredicateFlow18CollectionPropertyC3sumAA20BasicComparisonQueryCySo8NSNumberCGyF">sum()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The sum of the objects in this collection property.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sum</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/BasicComparisonQuery.html">BasicComparisonQuery</a></span><span class="o">&lt;</span><span class="kt">NSNumber</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A basic comparison query.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13PredicateFlow18CollectionPropertyCA2A09GeneratedA6SchemaRzlE8elementsxyF"></a>
+                    <a name="//apple_ref/swift/Method/elements()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13PredicateFlow18CollectionPropertyCA2A09GeneratedA6SchemaRzlE8elementsxyF">elements()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the elements schema of this collection property.
+<strong>WARNING</strong>: Do not put the returned value in a var or let. Use it once per query (e.g. chaining).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">elements</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The current elements schema of this property.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13PredicateFlow18CollectionPropertyCA2A09GeneratedA6SchemaRzlE11anyElementsxyF"></a>
+                    <a name="//apple_ref/swift/Method/anyElements()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13PredicateFlow18CollectionPropertyCA2A09GeneratedA6SchemaRzlE11anyElementsxyF">anyElements()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Begin a query using ANY and get the elements schema of this collection property.
+<strong>WARNING</strong>: Do not put the returned value in a var or let. Use it once per query (e.g. chaining).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">anyElements</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The current elements schema of this property.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13PredicateFlow18CollectionPropertyCA2A09GeneratedA6SchemaRzlE12someElementsxyF"></a>
+                    <a name="//apple_ref/swift/Method/someElements()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13PredicateFlow18CollectionPropertyCA2A09GeneratedA6SchemaRzlE12someElementsxyF">someElements()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Begin a query using SOME and get the elements schema of this collection property.
+<strong>WARNING</strong>: Do not put the returned value in a var or let. Use it once per query (e.g. chaining).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">someElements</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The current elements schema of this property.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13PredicateFlow18CollectionPropertyCA2A09GeneratedA6SchemaRzlE11allElementsxyF"></a>
+                    <a name="//apple_ref/swift/Method/allElements()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13PredicateFlow18CollectionPropertyCA2A09GeneratedA6SchemaRzlE11allElementsxyF">allElements()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Begin a query using ALL and get the elements schema of this collection property.
+<strong>WARNING</strong>: Do not put the returned value in a var or let. Use it once per query (e.g. chaining).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">allElements</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The current elements schema of this property.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13PredicateFlow18CollectionPropertyCA2A09GeneratedA6SchemaRzlE12noneElementsxyF"></a>
+                    <a name="//apple_ref/swift/Method/noneElements()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13PredicateFlow18CollectionPropertyCA2A09GeneratedA6SchemaRzlE12noneElementsxyF">noneElements()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Begin a query using NONE and get the elements schema of this collection property.
+<strong>WARNING</strong>: Do not put the returned value in a var or let. Use it once per query (e.g. chaining).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">noneElements</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The current elements schema of this property.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13PredicateFlow18CollectionPropertyCA2A09GeneratedA6SchemaRzlE11avgElementsxyF"></a>
+                    <a name="//apple_ref/swift/Method/avgElements()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13PredicateFlow18CollectionPropertyCA2A09GeneratedA6SchemaRzlE11avgElementsxyF">avgElements()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Begin a query using the average of the objects in this collection property and get the elements schema of this collection property.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">avgElements</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The current elements schema of this property.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13PredicateFlow18CollectionPropertyCA2A09GeneratedA6SchemaRzlE13countElementsxyF"></a>
+                    <a name="//apple_ref/swift/Method/countElements()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13PredicateFlow18CollectionPropertyCA2A09GeneratedA6SchemaRzlE13countElementsxyF">countElements()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Begin a query using the count of the objects in this collection property and get the elements schema of this collection property.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">countElements</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The current elements schema of this property.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13PredicateFlow18CollectionPropertyCA2A09GeneratedA6SchemaRzlE11minElementsxyF"></a>
+                    <a name="//apple_ref/swift/Method/minElements()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13PredicateFlow18CollectionPropertyCA2A09GeneratedA6SchemaRzlE11minElementsxyF">minElements()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Begin a query using the minimum value in this collection property and get the elements schema of this collection property.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">minElements</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The current elements schema of this property.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13PredicateFlow18CollectionPropertyCA2A09GeneratedA6SchemaRzlE11maxElementsxyF"></a>
+                    <a name="//apple_ref/swift/Method/maxElements()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13PredicateFlow18CollectionPropertyCA2A09GeneratedA6SchemaRzlE11maxElementsxyF">maxElements()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Begin a query using the maximum value in this collection property and get the elements schema of this collection property.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">maxElements</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The current elements schema of this property.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13PredicateFlow18CollectionPropertyCA2A09GeneratedA6SchemaRzlE11sumElementsxyF"></a>
+                    <a name="//apple_ref/swift/Method/sumElements()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13PredicateFlow18CollectionPropertyCA2A09GeneratedA6SchemaRzlE11sumElementsxyF">sumElements()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Begin a query using the sum of the objects in this collection property and get the elements schema of this collection property.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sumElements</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The current elements schema of this property.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13PredicateFlow18CollectionPropertyCA2A09GeneratedA6SchemaRzlE8subqueryACyxGAA0A6Result_pAA08SubqueryD0VyxGcF"></a>
+                    <a name="//apple_ref/swift/Method/subquery(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13PredicateFlow18CollectionPropertyCA2A09GeneratedA6SchemaRzlE8subqueryACyxGAA0A6Result_pAA08SubqueryD0VyxGcF">subquery(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Begin a subquery in this collection property.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">subquery</span><span class="p">(</span><span class="n">_</span> <span class="nv">subquery</span><span class="p">:</span> <span class="p">(</span><span class="kt"><a href="../Structs/SubqueryProperty.html">SubqueryProperty</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/PredicateResult.html">PredicateResult</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CollectionProperty</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>subquery</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The subquery element.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A collection property.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13PredicateFlow18CollectionPropertyCA2A09GeneratedA6SchemaRzlE8subqueryACyxGSS_AA0A6Result_pAA08SubqueryD0VyxGctF"></a>
+                    <a name="//apple_ref/swift/Method/subquery(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13PredicateFlow18CollectionPropertyCA2A09GeneratedA6SchemaRzlE8subqueryACyxGSS_AA0A6Result_pAA08SubqueryD0VyxGctF">subquery(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Begin a subquery in this collection property.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">subquery</span><span class="p">(</span><span class="n">_</span> <span class="nv">variableName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">subquery</span><span class="p">:</span> <span class="p">(</span><span class="kt"><a href="../Structs/SubqueryProperty.html">SubqueryProperty</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/PredicateResult.html">PredicateResult</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CollectionProperty</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>variableName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the element.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>subquery</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The subquery element.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A collection property.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13PredicateFlow18CollectionPropertyCAASSRszlE10anyStringsAA21StringComparisonQueryCyF"></a>
+                    <a name="//apple_ref/swift/Method/anyStrings()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13PredicateFlow18CollectionPropertyCAASSRszlE10anyStringsAA21StringComparisonQueryCyF">anyStrings()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Begin a query using ANY.
+<strong>WARNING</strong>: Do not put the returned value in a var or let. Use it once per query (e.g. chaining).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">anyStrings</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/StringComparisonQuery.html">StringComparisonQuery</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A string comparison query.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13PredicateFlow18CollectionPropertyCAASSRszlE11someStringsAA21StringComparisonQueryCyF"></a>
+                    <a name="//apple_ref/swift/Method/someStrings()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13PredicateFlow18CollectionPropertyCAASSRszlE11someStringsAA21StringComparisonQueryCyF">someStrings()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Begin a query using SOME.
+<strong>WARNING</strong>: Do not put the returned value in a var or let. Use it once per query (e.g. chaining).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">someStrings</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/StringComparisonQuery.html">StringComparisonQuery</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A string comparison query.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13PredicateFlow18CollectionPropertyCAASSRszlE10allStringsAA21StringComparisonQueryCyF"></a>
+                    <a name="//apple_ref/swift/Method/allStrings()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13PredicateFlow18CollectionPropertyCAASSRszlE10allStringsAA21StringComparisonQueryCyF">allStrings()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Begin a query using ALL.
+<strong>WARNING</strong>: Do not put the returned value in a var or let. Use it once per query (e.g. chaining).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">allStrings</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/StringComparisonQuery.html">StringComparisonQuery</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A string comparison query.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13PredicateFlow18CollectionPropertyCAASSRszlE11noneStringsAA21StringComparisonQueryCyF"></a>
+                    <a name="//apple_ref/swift/Method/noneStrings()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13PredicateFlow18CollectionPropertyCAASSRszlE11noneStringsAA21StringComparisonQueryCyF">noneStrings()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Begin a query using NONE.
+<strong>WARNING</strong>: Do not put the returned value in a var or let. Use it once per query (e.g. chaining).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">noneStrings</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/StringComparisonQuery.html">StringComparisonQuery</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A string comparison query.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2018 <a class="link" href="https://twitter.com/a_delfante" target="_blank" rel="external">andreadelfante</a>. All rights reserved. (Last updated: 2018-07-29)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
