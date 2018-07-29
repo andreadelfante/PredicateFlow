@@ -47,34 +47,27 @@ platform :ios do
     jazzy(
       config: ".jazzy.yaml"
     )
-  end
-  
-  desc "Publish documentation"
-  lane :publish_doc do
-    branch = git_branch
-    commit_github_file(
-      repository_name: "andreadelfante/PredicateFlow",
-      api_token: ENV["GITHUB_TOKEN"],
-      message: "Update docs folder",
-      branch: branch,
-      path: "docs"
-    )
-  end
-  
-  desc "Mark a new release to GitHub"
-  lane :mark_tag_github do
+    
     version = read_podspec['version']
-    set_github_release(
-      repository_name: "andreadelfante/PredicateFlow",
-      api_token: ENV["GITHUB_TOKEN"],
-      name: version,
-      tag_name: version,
-      commitish: "master"
+    branch = git_branch
+    
+    git_add(path: "docs")
+    git_commit(
+      path: "docs",
+      message: "Update docs folder for version #{version}"
+    )
+    push_to_git_remote(
+      local_branch: branch,
+      remote_branch: branch
     )
   end
 
   desc "Deploy to Cocoapods and push tag to master"
   lane :deploy do
+    version = read_podspec['version']
+    add_git_tag(tag: version)
+    push_git_tags
+    
     pod_push
   end
 end
