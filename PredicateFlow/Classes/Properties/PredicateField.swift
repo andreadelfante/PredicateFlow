@@ -7,7 +7,7 @@ import Foundation
 /**
     The basic protocol for something that represents a predicate field.
 */
-public protocol PredicateField: CustomStringConvertible, CustomDebugStringConvertible {
+public protocol PredicateField: CustomStringConvertible {
 
     /**
         The predicate field name.
@@ -25,21 +25,17 @@ public extension PredicateField {
 	public func keyPath() -> String {
 		return self.name
 	}
-	
+
     public var description: String {
         return keyPath()
     }
-	
-	public var debugDescription: String {
-		return keyPath()
-	}
 }
 
 /**
     A predicate field that allows to concatenate parents fields.
 */
 public class CompoundablePredicateField: PredicateField {
-	
+
 	internal var compoundFieldBuilder: CompoundFieldBuilder
 
     /**
@@ -61,7 +57,7 @@ public class CompoundablePredicateField: PredicateField {
 		self.init(compoundFieldBuilder)
 		compoundFieldBuilder.append(name)
 	}
-	
+
 	/**
 		Create a new CompoundablePredicateField.
 	
@@ -70,18 +66,18 @@ public class CompoundablePredicateField: PredicateField {
 	internal init(_ compoundFieldBuilder: CompoundFieldBuilder) {
 		self.compoundFieldBuilder = compoundFieldBuilder
 	}
-	
+
 	public var name: String {
 		return compoundFieldBuilder.field().name
 	}
-	
+
 	/**
 	Create a query checking if this property is nil.
 	*/
 	public var isNil: PredicateResult {
 		return BasicComparisonQuery<Any>(self).isNil()
 	}
-	
+
 	/**
 	Create a query checking if this property is not nil.
 	*/

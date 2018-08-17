@@ -25,7 +25,7 @@ public class BoolPredicateProperty: CompoundablePredicateField {
 	public var isFalse: PredicateResult {
 		return BasicComparisonQuery<Bool>(self).isEqual(false)
 	}
-	
+
 	public static func ==(lhs: BoolPredicateProperty, rhs: Bool) -> PredicateResult {
 		return rhs ? lhs.isTrue : lhs.isFalse
 	}

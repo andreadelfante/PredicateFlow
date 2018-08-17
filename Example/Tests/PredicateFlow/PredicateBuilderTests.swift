@@ -240,5 +240,49 @@ class PFBuildersTests: XCTestCase {
                 )
                 .query()
         )
+        XCTAssertEqual(
+            NSPredicate(format: "age == nil AND (name != nil AND NOT (owner.name != nil AND name == \"foo\"))"),
+            PredicateBuilder(DogSchema.age.isNil)
+                .and(
+                    PredicateBuilder(DogSchema.name.isNotNil)
+                        .andNot(
+                            PredicateBuilder(DogSchema.owner.element().name.isNotNil)
+                                .and(DogSchema.name.is("foo"))
+                    )
+                )
+                .query()
+        )
+        XCTAssertEqual(
+            NSPredicate(format: "age == nil AND (name != nil AND (owner.name != nil AND name == \"foo\"))"),
+            PredicateBuilder(DogSchema.age.isNil)
+                .and(
+                    PredicateBuilder(DogSchema.name.isNotNil)
+                        .and(
+                            PredicateBuilder(DogSchema.owner.element().name.isNotNil)
+                                .and(DogSchema.name.is("foo"))
+                    )
+                )
+                .query()
+        )
+        XCTAssertEqual(
+            NSPredicate(format: "age == nil AND (name != nil OR (owner.name != nil AND name == \"foo\"))"),
+            PredicateBuilder(DogSchema.age.isNil)
+                .and(
+                    PredicateBuilder(DogSchema.name.isNotNil)
+                        .or(
+                            PredicateBuilder(DogSchema.owner.element().name.isNotNil)
+                                .and(DogSchema.name.is("foo"))
+                    )
+                )
+                .query()
+        )
+    }
+    
+    func testDescription() {
+        let builder = PredicateBuilder(DogSchema.age.isGreater(than: 5))
+            .and(DogSchema.name.isEqual("foo"))
+        
+        XCTAssertEqual("age > 5 AND name == \"foo\"", builder.description)
+        XCTAssertEqual(builder.description, builder.debugDescription)
     }
 }

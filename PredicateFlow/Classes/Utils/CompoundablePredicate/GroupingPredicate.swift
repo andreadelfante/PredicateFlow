@@ -4,7 +4,7 @@ import Foundation
  Protocol to group predicates in brackets.
  */
 public protocol GroupingPredicate: CompoundablePredicate {
-    
+
     /**
      Compound prev predicate with a predicate group, using AND.
      
@@ -13,7 +13,7 @@ public protocol GroupingPredicate: CompoundablePredicate {
      - returns: self for chaining.
      */
     func and(_ group: Self) -> Self
-    
+
     /**
      Compound prev predicate with a predicate group, using AND NOT.
      
@@ -22,7 +22,7 @@ public protocol GroupingPredicate: CompoundablePredicate {
      - returns: self for chaining.
      */
     func andNot(_ group: Self) -> Self
-    
+
     /**
      Compound prev predicate with a predicate group, using OR.
      
@@ -31,7 +31,7 @@ public protocol GroupingPredicate: CompoundablePredicate {
      - returns: self for chaining.
      */
     func or(_ group: Self) -> Self
-    
+
     /**
      Compound prev predicate with a predicate group, using OR NOT.
      

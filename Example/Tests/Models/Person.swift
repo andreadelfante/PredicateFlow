@@ -19,4 +19,5 @@ class Person: PredicateSchema {
 	private var birth: Date?
 	private var sex: Sex!
 	private var dogs: [Dog] = []
+    private var attributes: [String] = []
 }

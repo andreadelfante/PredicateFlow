@@ -17,19 +17,8 @@ public final class CompoundFieldBuilder {
     }
 
 	@discardableResult
-    func append(_ field: PredicateField) -> Self {
-        return append(field.name)
-    }
-
-	@discardableResult
     func append(_ fieldName: String) -> Self {
         fields.append(fieldName)
-        return self
-    }
-
-	@discardableResult
-    func join(_ builder: CompoundFieldBuilder) -> Self {
-        fields.append(contentsOf: builder.fields)
         return self
     }
 
@@ -66,37 +55,38 @@ public final class CompoundFieldBuilder {
         fields.append("@sum")
         return self
     }
-	
+
 	@discardableResult
 	func any() -> Self {
 		aggregateOperator = "ANY"
 		return self
 	}
-	
+
 	@discardableResult
 	func some() -> Self {
 		aggregateOperator = "SOME"
 		return self
 	}
-	
+
 	@discardableResult
 	func all() -> Self {
 		aggregateOperator = "ALL"
 		return self
 	}
-	
+
 	@discardableResult
 	func none() -> Self {
 		aggregateOperator = "NONE"
 		return self
 	}
-	
-	@discardableResult
-	func selfValue() -> Self {
-		fields.append("SELF")
-		return self
-	}
-	
+
+//    FUTURE WORK
+//    @discardableResult
+//    func selfValue() -> Self {
+//        fields.append("SELF")
+//        return self
+//    }
+
 	private func joinFields() -> String {
 		let joined = fields.joined(separator: ".")
 		return aggregateOperator == nil ? joined : "\(aggregateOperator!) \(joined)"

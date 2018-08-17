@@ -11,12 +11,12 @@ import Foundation
 Used for defining generated predicate schema.
 */
 public protocol GeneratedPredicateSchema {
-	
+
 	/**
 	Init with a prev compound field builder.
 	*/
 	init(compoundFieldBuilder: CompoundFieldBuilder)
-	
+
 	/**
 	The entity name of the related schema. (e.g: if you define a class/struct Dog, this library will generate a related DogSchema that implements this protocol).
 	*/
@@ -24,7 +24,7 @@ public protocol GeneratedPredicateSchema {
 }
 
 public extension GeneratedPredicateSchema {
-	
+
 	/**
 	Init with an empty compound field builder.
 	*/

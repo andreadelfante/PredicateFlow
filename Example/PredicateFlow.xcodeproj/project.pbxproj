@@ -7,8 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		607FACEC1AFB9204008FA782 /* PredicateFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* PredicateFlowTests.swift */; };
 		6545209F20A3743D005362FD /* PredicateBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6545209E20A3743D005362FD /* PredicateBuilderTests.swift */; };
+		65849694211C590A00D5119A /* PredicatePropertyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65849693211C590A00D5119A /* PredicatePropertyTests.swift */; };
+		65849696211C598C00D5119A /* BasicComparisonQueryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65849695211C598C00D5119A /* BasicComparisonQueryTests.swift */; };
+		65849699211C5C6C00D5119A /* StringComparisonQueryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65849698211C5C6C00D5119A /* StringComparisonQueryTests.swift */; };
+		6584969B211C5F0400D5119A /* BoolPredicatePropertyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584969A211C5F0400D5119A /* BoolPredicatePropertyTests.swift */; };
+		6584969D211C5FE200D5119A /* ObjectPropertyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584969C211C5FE200D5119A /* ObjectPropertyTests.swift */; };
+		658496A0211C602F00D5119A /* CollectionPropertyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584969F211C602F00D5119A /* CollectionPropertyTests.swift */; };
+		658496A2211C618100D5119A /* SubqueryPropertyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658496A1211C618100D5119A /* SubqueryPropertyTests.swift */; };
+		65E11DE02126D8880029FB3E /* SortDescriptorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E11DDF2126D8880029FB3E /* SortDescriptorTests.swift */; };
+		65E11DE42126D9960029FB3E /* TestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E11DE32126D9960029FB3E /* TestObject.swift */; };
+		65E11DE62126DAAD0029FB3E /* PredicateFlowRealmBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E11DE52126DAAD0029FB3E /* PredicateFlowRealmBaseTests.swift */; };
+		65E11DE82126DDD10029FB3E /* ResultsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E11DE72126DDD10029FB3E /* ResultsTests.swift */; };
+		65E11DEA2126E2F30029FB3E /* ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E11DE92126E2F30029FB3E /* ListTests.swift */; };
+		65E11DED2127039D0029FB3E /* PredicateFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E11DEC2127039D0029FB3E /* PredicateFieldTests.swift */; };
 		91142368204173BD008A67A2 /* PredicateFlow.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91142367204173BD008A67A2 /* PredicateFlow.generated.swift */; };
 		914BF26A20409C8900C835D3 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914BF26620409C8900C835D3 /* Dog.swift */; };
 		914BF26B20409C8900C835D3 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914BF26720409C8900C835D3 /* Person.swift */; };
@@ -19,8 +31,20 @@
 /* Begin PBXFileReference section */
 		607FACE51AFB9204008FA782 /* PredicateFlow_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PredicateFlow_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* PredicateFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredicateFlowTests.swift; sourceTree = "<group>"; };
 		6545209E20A3743D005362FD /* PredicateBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredicateBuilderTests.swift; sourceTree = "<group>"; };
+		65849693211C590A00D5119A /* PredicatePropertyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredicatePropertyTests.swift; sourceTree = "<group>"; };
+		65849695211C598C00D5119A /* BasicComparisonQueryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicComparisonQueryTests.swift; sourceTree = "<group>"; };
+		65849698211C5C6C00D5119A /* StringComparisonQueryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringComparisonQueryTests.swift; sourceTree = "<group>"; };
+		6584969A211C5F0400D5119A /* BoolPredicatePropertyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolPredicatePropertyTests.swift; sourceTree = "<group>"; };
+		6584969C211C5FE200D5119A /* ObjectPropertyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectPropertyTests.swift; sourceTree = "<group>"; };
+		6584969F211C602F00D5119A /* CollectionPropertyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPropertyTests.swift; sourceTree = "<group>"; };
+		658496A1211C618100D5119A /* SubqueryPropertyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubqueryPropertyTests.swift; sourceTree = "<group>"; };
+		65E11DDF2126D8880029FB3E /* SortDescriptorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortDescriptorTests.swift; sourceTree = "<group>"; };
+		65E11DE32126D9960029FB3E /* TestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestObject.swift; sourceTree = "<group>"; };
+		65E11DE52126DAAD0029FB3E /* PredicateFlowRealmBaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredicateFlowRealmBaseTests.swift; sourceTree = "<group>"; };
+		65E11DE72126DDD10029FB3E /* ResultsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTests.swift; sourceTree = "<group>"; };
+		65E11DE92126E2F30029FB3E /* ListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTests.swift; sourceTree = "<group>"; };
+		65E11DEC2127039D0029FB3E /* PredicateFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredicateFieldTests.swift; sourceTree = "<group>"; };
 		66ED4B80FFDC6CD9CC2BD239 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		8363EB2C7C79BD597BA70D12 /* Pods-PredicateFlow_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PredicateFlow_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PredicateFlow_Tests/Pods-PredicateFlow_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		91142367204173BD008A67A2 /* PredicateFlow.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredicateFlow.generated.swift; sourceTree = "<group>"; };
@@ -84,8 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				914BF26320409C7B00C835D3 /* Models */,
-				607FACEB1AFB9204008FA782 /* PredicateFlowTests.swift */,
-				6545209E20A3743D005362FD /* PredicateBuilderTests.swift */,
+				65E11DDD2126D85F0029FB3E /* PredicateFlow */,
+				65E11DDE2126D86D0029FB3E /* PredicateFlow-Realm */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -109,12 +133,56 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		6584969E211C5FEE00D5119A /* Properties */ = {
+			isa = PBXGroup;
+			children = (
+				6584969A211C5F0400D5119A /* BoolPredicatePropertyTests.swift */,
+				6584969F211C602F00D5119A /* CollectionPropertyTests.swift */,
+				6584969C211C5FE200D5119A /* ObjectPropertyTests.swift */,
+				65849693211C590A00D5119A /* PredicatePropertyTests.swift */,
+				658496A1211C618100D5119A /* SubqueryPropertyTests.swift */,
+			);
+			path = Properties;
+			sourceTree = "<group>";
+		};
+		65E11DDD2126D85F0029FB3E /* PredicateFlow */ = {
+			isa = PBXGroup;
+			children = (
+				6545209E20A3743D005362FD /* PredicateBuilderTests.swift */,
+				6584969E211C5FEE00D5119A /* Properties */,
+				65E11DEB2127038E0029FB3E /* Utils */,
+				65849695211C598C00D5119A /* BasicComparisonQueryTests.swift */,
+				65849698211C5C6C00D5119A /* StringComparisonQueryTests.swift */,
+			);
+			path = PredicateFlow;
+			sourceTree = "<group>";
+		};
+		65E11DDE2126D86D0029FB3E /* PredicateFlow-Realm */ = {
+			isa = PBXGroup;
+			children = (
+				65E11DE52126DAAD0029FB3E /* PredicateFlowRealmBaseTests.swift */,
+				65E11DDF2126D8880029FB3E /* SortDescriptorTests.swift */,
+				65E11DE72126DDD10029FB3E /* ResultsTests.swift */,
+				65E11DE92126E2F30029FB3E /* ListTests.swift */,
+			);
+			path = "PredicateFlow-Realm";
+			sourceTree = "<group>";
+		};
+		65E11DEB2127038E0029FB3E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				65E11DEC2127039D0029FB3E /* PredicateFieldTests.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		914BF26320409C7B00C835D3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				91142367204173BD008A67A2 /* PredicateFlow.generated.swift */,
 				914BF26620409C8900C835D3 /* Dog.swift */,
 				914BF26720409C8900C835D3 /* Person.swift */,
+				65E11DE32126D9960029FB3E /* TestObject.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -251,11 +319,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* PredicateFlowTests.swift in Sources */,
 				914BF26B20409C8900C835D3 /* Person.swift in Sources */,
 				91142368204173BD008A67A2 /* PredicateFlow.generated.swift in Sources */,
+				65E11DE02126D8880029FB3E /* SortDescriptorTests.swift in Sources */,
+				6584969D211C5FE200D5119A /* ObjectPropertyTests.swift in Sources */,
+				65E11DE82126DDD10029FB3E /* ResultsTests.swift in Sources */,
+				65849696211C598C00D5119A /* BasicComparisonQueryTests.swift in Sources */,
+				65849699211C5C6C00D5119A /* StringComparisonQueryTests.swift in Sources */,
 				914BF26A20409C8900C835D3 /* Dog.swift in Sources */,
+				65E11DED2127039D0029FB3E /* PredicateFieldTests.swift in Sources */,
+				658496A0211C602F00D5119A /* CollectionPropertyTests.swift in Sources */,
+				65E11DEA2126E2F30029FB3E /* ListTests.swift in Sources */,
+				65E11DE62126DAAD0029FB3E /* PredicateFlowRealmBaseTests.swift in Sources */,
+				65E11DE42126D9960029FB3E /* TestObject.swift in Sources */,
+				65849694211C590A00D5119A /* PredicatePropertyTests.swift in Sources */,
 				6545209F20A3743D005362FD /* PredicateBuilderTests.swift in Sources */,
+				658496A2211C618100D5119A /* SubqueryPropertyTests.swift in Sources */,
+				6584969B211C5F0400D5119A /* BoolPredicatePropertyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

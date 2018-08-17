@@ -21,6 +21,11 @@ or alternatively using `brew cask install fastlane`
 fastlane ios linting
 ```
 Linting...
+### ios linting_fixing
+```
+fastlane ios linting_fixing
+```
+Linting and fixing...
 ### ios test
 ```
 fastlane ios test
@@ -35,7 +40,7 @@ Create documentation
 ```
 fastlane ios deploy
 ```
-Deploy to Cocoapods
+Deploy to Cocoapods and push tag to master
 
 ----
 

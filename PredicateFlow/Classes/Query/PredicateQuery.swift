@@ -11,7 +11,7 @@ import Foundation
 The basic protocol for something that represents a predicate query.
 */
 public protocol PredicateQuery: FlowNillable {
-	
+
 	/**
 	The field of this query.
 	*/
@@ -19,11 +19,11 @@ public protocol PredicateQuery: FlowNillable {
 }
 
 extension PredicateQuery {
-	
+
 	public func isNil() -> PredicateResult {
 		return ConcretePredicateResult("\(field) == nil")
 	}
-    
+
 	public func isNotNil() -> PredicateResult {
 		return ConcretePredicateResult("\(field) != nil")
 	}

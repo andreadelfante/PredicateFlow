@@ -9,7 +9,7 @@ import Foundation
 
 public protocol FlowEquatable {
     associatedtype EquatableObject
-    
+
     /**
      Create a query checking if this property is equal to object.
      
@@ -18,7 +18,7 @@ public protocol FlowEquatable {
      - returns: a predicate result.
      */
     func isEqual(_ object: EquatableObject) -> PredicateResult
-    
+
     /**
      Create a query checking if this property is not equal to object.
      
@@ -27,7 +27,7 @@ public protocol FlowEquatable {
      - returns: a predicate result.
      */
     func isNotEqual(_ object: EquatableObject) -> PredicateResult
-    
+
     /**
      Create a query checking if this property is in a objects collection.
      
@@ -36,7 +36,7 @@ public protocol FlowEquatable {
      - returns: a predicate result.
      */
     func `in`(_ objects: [EquatableObject]) -> PredicateResult
-    
+
     /**
      Create a query checking if this property is NOT in a objects collection.
      
@@ -48,14 +48,14 @@ public protocol FlowEquatable {
 }
 
 extension FlowEquatable {
-    
+
     /**
      Alias of isEqual(_:).
      */
     public func `is`(_ object: EquatableObject) -> PredicateResult {
         return isEqual(object)
     }
-    
+
     /**
      Alias of isNotEqual(_:).
      */
@@ -65,7 +65,7 @@ extension FlowEquatable {
 }
 
 extension FlowEquatable {
-    
+
     /**
      Create a query checking if this property is in a objects collection.
      
@@ -76,7 +76,7 @@ extension FlowEquatable {
     public func `in`(_ objects: EquatableObject...) -> PredicateResult {
         return self.in(objects)
     }
-    
+
     /**
      Create a query checking if this property is NOT in a objects collection.
      
@@ -90,11 +90,11 @@ extension FlowEquatable {
 }
 
 extension FlowEquatable {
-    
+
     public static func ==(lhs: Self, rhs: Self.EquatableObject) -> PredicateResult {
         return lhs.isEqual(rhs)
     }
-    
+
     public static func !=(lhs: Self, rhs: Self.EquatableObject) -> PredicateResult {
         return lhs.isNotEqual(rhs)
     }

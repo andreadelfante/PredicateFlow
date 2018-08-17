@@ -29,16 +29,37 @@ platform :ios do
     )
   end
 
+  desc "Linting and fixing..."
+  lane :linting_fixing do
+    ["PredicateFlow", "PredicateFlow-Realm"].each do |path|
+      puts "Linting and fixing '#{path}'..."
+
+      swiftlint(
+        mode: :autocorrect,
+        executable: "Example/Pods/SwiftLint/swiftlint",
+        path: path,
+        quiet: true
+      )
+    end
+  end
+
   desc "Run tests for PredicateFlow"
   lane :test do
     run_tests(
-      devices: [
-        "iPhone 6s"
-      ],
+      device: "iPhone 6s",
       workspace: "Example/PredicateFlow.xcworkspace",
       scheme: "PredicateFlow-Example",
       code_coverage: true,
-      skip_slack: true
+      skip_slack: true,
+      derived_data_path: "./build"
+    )
+    xcov(
+      workspace: "Example/PredicateFlow.xcworkspace",
+      scheme: "PredicateFlow-Example",
+      html_report: true,
+      json_report: true,
+      markdown_report: true,
+      derived_data_path: "./build"
     )
   end
 

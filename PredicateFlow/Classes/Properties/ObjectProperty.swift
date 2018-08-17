@@ -11,7 +11,7 @@ import Foundation
 Defines an object predicate property.
 */
 public class ObjectProperty<T: GeneratedPredicateSchema>: CompoundablePredicateField {
-	
+
 	/**
 	Get the element schema of this object property.
 	**WARNING**: Do not put the returned value in a var or let. Use it once per query (e.g. chaining).

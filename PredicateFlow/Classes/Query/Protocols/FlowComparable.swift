@@ -9,7 +9,7 @@ import Foundation
 
 public protocol FlowComparable {
     associatedtype ComparableObject
-    
+
     /**
      Create a query checking if this property is greater than object.
      
@@ -18,7 +18,7 @@ public protocol FlowComparable {
      - returns: a predicate result.
      */
     func isGreater(than object: ComparableObject) -> PredicateResult
-    
+
     /**
      Create a query checking if this property is greater than or equal to object.
      
@@ -27,7 +27,7 @@ public protocol FlowComparable {
      - returns: a predicate result.
      */
     func isGreater(thanOrEqual object: ComparableObject) -> PredicateResult
-    
+
     /**
      Create a query checking if this property is less than object.
      
@@ -36,7 +36,7 @@ public protocol FlowComparable {
      - returns: a predicate result.
      */
     func isLess(than object: ComparableObject) -> PredicateResult
-    
+
     /**
      Create a query checking if this property is less than or equal to object.
      
@@ -45,7 +45,7 @@ public protocol FlowComparable {
      - returns: a predicate result.
      */
     func isLess(thanOrEqual object: ComparableObject) -> PredicateResult
-    
+
     /**
      Create a query checking if this property is between the two parameters.
      
@@ -55,7 +55,7 @@ public protocol FlowComparable {
      - returns: a predicate result.
      */
     func between(_ first: ComparableObject, _ second: ComparableObject) -> PredicateResult
-    
+
     /**
      Create a query checking if this property is NOT between the two parameters.
      
@@ -68,19 +68,19 @@ public protocol FlowComparable {
 }
 
 extension FlowComparable {
-    
+
     public static func >(lhs: Self, rhs: Self.ComparableObject) -> PredicateResult {
         return lhs.isGreater(than: rhs)
     }
-    
+
     public static func >=(lhs: Self, rhs: Self.ComparableObject) -> PredicateResult {
         return lhs.isGreater(thanOrEqual: rhs)
     }
-    
+
     public static func <(lhs: Self, rhs: Self.ComparableObject) -> PredicateResult {
         return lhs.isLess(than: rhs)
     }
-    
+
     public static func <=(lhs: Self, rhs: Self.ComparableObject) -> PredicateResult {
         return lhs.isLess(thanOrEqual: rhs)
     }
