@@ -13,6 +13,8 @@ env:
 cache:
   - bundler
   - cocoapods
+  directories:
+  - ./build
 
 jobs:
   include:

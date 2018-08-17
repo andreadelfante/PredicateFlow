@@ -118,7 +118,7 @@ internal struct PersonSchema: GeneratedPredicateSchema {
 To type a floawable NSPredicate, just write:
 ```swift
 DogSchema.age.isEqual(10).query()
-// Legacy mode: 
+// Vanilla mode: 
 // NSPredicate("age == %@", 10)
 ```
 You can also write compound predicate, and use deeper fields:
@@ -131,7 +131,7 @@ PredicateBuilder(DogSchema.age.isGreater(than: 10))
     .or(DogSchema.owner.element().dogs.anyElements().name.isEqual("Foo"))
     .build()
     
-// Legacy mode: 
+// Vanilla mode: 
 // NSPredicate("age > %@ AND isHungry == %@ AND age BETWEEN %@ AND owner.name == %@ OR owner.dogs.@max.age > %@ OR ANY owner.dogs.name == %@", 10, true, [1, 10], "Foo", 10, "Foo")
 ```
 
@@ -140,7 +140,7 @@ PredicateFlow can also build KeyPaths, and you can use it to get a strong-typed 
 DogSchema.age.keyPath()
 DogSchema.owner.element().dogs.keyPath()
 
-// Legacy mode:
+// Vanilla mode:
 // "age"
 // "owner.dogs"
 ```
@@ -155,7 +155,7 @@ realm.objects(Dog.self)
     .filter(DogSchema.isHungry.isTrue)
     .sorted(DogSchema.age.ascending())
     
-// Legacy mode:
+// Vanilla mode:
 realm.objects(Dog.self)
     .filter("age > %@", 10)
     .filter("isHungry == %@", true)
