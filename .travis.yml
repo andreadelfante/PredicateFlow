@@ -11,8 +11,8 @@ env:
     - LANG=en_US.UTF-8
 
 cache:
-  - bundler
-  - cocoapods
+  bundler: true
+  cocoapods: true
   directories:
   - ./build
 
