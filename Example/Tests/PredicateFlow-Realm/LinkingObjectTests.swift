@@ -1,16 +1,14 @@
 //
-//  ListTests.swift
+//  LinkingObjectTests.swift
 //  PredicateFlow_Tests
 //
-//  Created by Andrea on 17/08/18.
+//  Created by Andrea Del Fante on 30/08/2018.
 //  Copyright © 2018 CocoaPods. All rights reserved.
 //
 
 import XCTest
-import PredicateFlow
-import RealmSwift
 
-class ListTests: PredicateFlowRealmBaseTests {
+class LinkingObjectTests: PredicateFlowRealmBaseTests {
     
     var testingElement: TestObject!
     
@@ -27,16 +25,16 @@ class ListTests: PredicateFlowRealmBaseTests {
     }
     
     func testFilter() {
-        let expected = testingElement.children.filter("int < %@", 17)
-        let result = testingElement.children.filter(TestObjectSchema.int.isLess(than: 17))
+        let expected = testingElement.parent.filter("int < %@", 17)
+        let result = testingElement.parent.filter(TestObjectSchema.int.isLess(than: 17))
         
         PFRLMEqual(expected, result)
     }
     
     func testSorted() {
         [true, false].forEach {
-            let expected = testingElement.children.sorted(SortDescriptor(keyPath: "key", ascending: $0))
-            let result = testingElement.children.sorted($0 ? TestObjectSchema.key.ascending() : TestObjectSchema.key.descending())
+            let expected = testingElement.parent.sorted(byKeyPath: "key", ascending: $0)
+            let result = testingElement.parent.sorted($0 ? TestObjectSchema.key.ascending() : TestObjectSchema.key.descending())
             
             PFRLMEqual(expected, result)
         }
