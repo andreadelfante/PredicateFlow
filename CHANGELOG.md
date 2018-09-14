@@ -3,13 +3,14 @@
 
 ### Breaking Changes
 * To build a new predicate property, now you must use the new builder API.
-  | Old API                                                     | New API                                                        |
-  |:------------------------------------------------------------|:---------------------------------------------------------------|
-  | `CollectionProperty<T>("foo", compoundFieldBuilder)`        | `builder.collection("foo")`                                    |
-  | `ObjectProperty<T>("foo", compoundFieldBuilder)`            | `builder.object("foo")`                                        |
-  | `StringPredicateProperty("foo", compoundFieldBuilder)`      | `builder.string("foo")`                                        |
-  | `BoolPredicateProperty("foo", compoundFieldBuilder)`        | `builder.bool("foo")`                                          |
-  | `PredicateProperty<T>("foo", compoundFieldBuilder)`         | `builder.generic("foo")`                                       |
+
+  | Old API                                                | New API                     |
+  |--------------------------------------------------------|-----------------------------|
+  | `CollectionProperty("foo", compoundFieldBuilder)`      | `builder.collection("foo")` |
+  | `ObjectProperty("foo", compoundFieldBuilder)`          | `builder.object("foo")`     |
+  | `StringPredicateProperty("foo", compoundFieldBuilder)` | `builder.string("foo")`     |
+  | `BoolPredicateProperty("foo", compoundFieldBuilder)`   | `builder.bool("foo")`       |
+  | `PredicateProperty("foo", compoundFieldBuilder)`       | `builder.generic("foo")`    |
 
 ### Enhancements
 * Add support for subquery.
