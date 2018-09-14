@@ -260,6 +260,20 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/andrea/Desktop/PredicateFlow/PredicateFlow-Realm/Classes/LinkingObj+PF.swift",
+      "line": 12,
+      "symbol": "LinkingObjects.filter(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/andrea/Desktop/PredicateFlow/PredicateFlow-Realm/Classes/LinkingObj+PF.swift",
+      "line": 16,
+      "symbol": "LinkingObjects.sorted(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/andrea/Desktop/PredicateFlow/PredicateFlow-Realm/Classes/List+PF.swift",
       "line": 12,
       "symbol": "List.filter(_:)",

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>PredicateResult Protocol Reference</title>
+    <title>PredicatePropertyBuilder Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Protocol/PredicateResult" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Protocol/PredicatePropertyBuilder" class="dashAnchor"></a>
 
-    <a title="PredicateResult Protocol Reference"></a>
+    <a title="PredicatePropertyBuilder Protocol Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -50,7 +50,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">PredicateFlow Reference</a>
       <img class="carat" src="../img/carat.png" />
-      PredicateResult Protocol Reference
+      PredicatePropertyBuilder Protocol Reference
     </p>
 
     <div class="content-wrapper">
@@ -174,14 +174,14 @@
 
         <section class="section">
           <div class="section-content">
-            <h1>PredicateResult</h1>
+            <h1>PredicatePropertyBuilder</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">PredicateResult</span> <span class="p">:</span> <span class="kt">CustomDebugStringConvertible</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">PredicatePropertyBuilder</span></code></pre>
 
                 </div>
               </div>
-            <p>The result protocol of a predicate query.</p>
+            <p>This builder is useful to construct predicate properties.</p>
 
           </div>
         </section>
@@ -193,9 +193,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13PredicateFlow0A6ResultP9predicateSo11NSPredicateCvp"></a>
-                    <a name="//apple_ref/swift/Property/predicate" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13PredicateFlow0A6ResultP9predicateSo11NSPredicateCvp">predicate</a>
+                    <a name="/s:13PredicateFlow0A15PropertyBuilderP4boolAA04BoolaC0CSSF"></a>
+                    <a name="//apple_ref/swift/Method/bool(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13PredicateFlow0A15PropertyBuilderP4boolAA04BoolaC0CSSF">bool(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -203,16 +203,39 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The predicate.</p>
+                        <p>Build a BoolPredicateProperty.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">predicate</span><span class="p">:</span> <span class="kt">NSPredicate</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">bool</span><span class="p">(</span><span class="n">_</span> <span class="nv">fieldName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/BoolPredicateProperty.html">BoolPredicateProperty</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fieldName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the predicate property field name.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>a new BoolPredicateProperty.</p>
                       </div>
                     </section>
                   </div>
@@ -220,9 +243,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13PredicateFlow0A6ResultP12stringFormatSSvp"></a>
-                    <a name="//apple_ref/swift/Property/stringFormat" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13PredicateFlow0A6ResultP12stringFormatSSvp">stringFormat</a>
+                    <a name="/s:13PredicateFlow0A15PropertyBuilderP6stringAA06StringaC0CSSF"></a>
+                    <a name="//apple_ref/swift/Method/string(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13PredicateFlow0A15PropertyBuilderP6stringAA06StringaC0CSSF">string(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -230,16 +253,39 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The string format of this predicate result.</p>
+                        <p>Build a StringPredicateProperty.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">stringFormat</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">string</span><span class="p">(</span><span class="n">_</span> <span class="nv">fieldName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/StringPredicateProperty.html">StringPredicateProperty</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fieldName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the predicate property field name.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>a new StringPredicateProperty.</p>
                       </div>
                     </section>
                   </div>
@@ -247,9 +293,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13PredicateFlow0A6ResultP9argumentsSayypGvp"></a>
-                    <a name="//apple_ref/swift/Property/arguments" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13PredicateFlow0A6ResultP9argumentsSayypGvp">arguments</a>
+                    <a name="/s:13PredicateFlow0A15PropertyBuilderP6objectAA06ObjectC0Cyqd__GSSAA09GeneratedA6SchemaRd__lF"></a>
+                    <a name="//apple_ref/swift/Method/object(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13PredicateFlow0A15PropertyBuilderP6objectAA06ObjectC0Cyqd__GSSAA09GeneratedA6SchemaRd__lF">object(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -257,50 +303,39 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The arguments of this predicate results.</p>
+                        <p>Build a ObjectProperty.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">arguments</span><span class="p">:</span> <span class="p">[</span><span class="kt">Any</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">object</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">fieldName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/ObjectProperty.html">ObjectProperty</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/GeneratedPredicateSchema.html">GeneratedPredicateSchema</a></span></code></pre>
 
                         </div>
                       </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:13PredicateFlow0A6ResultPAAE5querySo11NSPredicateCyF"></a>
-                    <a name="//apple_ref/swift/Method/query()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13PredicateFlow0A6ResultPAAE5querySo11NSPredicateCyF">query()</a>
-                    </code>
-                      <span class="declaration-note">
-                        Extension method
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Alias for predicate.</p>
-
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fieldName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the predicate property field name.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">query</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">NSPredicate</span></code></pre>
-
-                        </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>a new ObjectProperty.</p>
                       </div>
                     </section>
                   </div>
@@ -308,28 +343,49 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:s23CustomStringConvertibleP11descriptionSSvp"></a>
-                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
-                    <a class="token" href="#/s:s23CustomStringConvertibleP11descriptionSSvp">description</a>
+                    <a name="/s:13PredicateFlow0A15PropertyBuilderP10collectionAA010CollectionC0Cyqd__GSSlF"></a>
+                    <a name="//apple_ref/swift/Method/collection(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13PredicateFlow0A15PropertyBuilderP10collectionAA010CollectionC0Cyqd__GSSlF">collection(_:)</a>
                     </code>
-                      <span class="declaration-note">
-                        Extension method
-                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Build a CollectionProperty.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">collection</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">fieldName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/CollectionProperty.html">CollectionProperty</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fieldName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the predicate property field name.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>a new CollectionProperty.</p>
                       </div>
                     </section>
                   </div>
@@ -337,28 +393,49 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:s28CustomDebugStringConvertibleP16debugDescriptionSSvp"></a>
-                    <a name="//apple_ref/swift/Property/debugDescription" class="dashAnchor"></a>
-                    <a class="token" href="#/s:s28CustomDebugStringConvertibleP16debugDescriptionSSvp">debugDescription</a>
+                    <a name="/s:13PredicateFlow0A15PropertyBuilderP7genericAA0aC0Cyqd__GSSlF"></a>
+                    <a name="//apple_ref/swift/Method/generic(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13PredicateFlow0A15PropertyBuilderP7genericAA0aC0Cyqd__GSSlF">generic(_:)</a>
                     </code>
-                      <span class="declaration-note">
-                        Extension method
-                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Build a generic PredicateProperty.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">debugDescription</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">generic</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">fieldName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/PredicateProperty.html">PredicateProperty</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fieldName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the predicate property field name.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>a new generic PredicateProperty.</p>
                       </div>
                     </section>
                   </div>

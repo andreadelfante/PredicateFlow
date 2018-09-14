@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>PredicateResult Protocol Reference</title>
+    <title>LinkingObjects Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Protocol/PredicateResult" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Extension/LinkingObjects" class="dashAnchor"></a>
 
-    <a title="PredicateResult Protocol Reference"></a>
+    <a title="LinkingObjects Extension Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -50,7 +50,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">PredicateFlow Reference</a>
       <img class="carat" src="../img/carat.png" />
-      PredicateResult Protocol Reference
+      LinkingObjects Extension Reference
     </p>
 
     <div class="content-wrapper">
@@ -174,15 +174,14 @@
 
         <section class="section">
           <div class="section-content">
-            <h1>PredicateResult</h1>
+            <h1>LinkingObjects</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">PredicateResult</span> <span class="p">:</span> <span class="kt">CustomDebugStringConvertible</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">class</span> <span class="kt">LinkingObjects</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">LinkingObjectsBase</span> <span class="k">where</span> <span class="kt">Element</span> <span class="p">:</span> <span class="kt">Object</span></code></pre>
 
                 </div>
               </div>
-            <p>The result protocol of a predicate query.</p>
-
+            
           </div>
         </section>
 
@@ -193,9 +192,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13PredicateFlow0A6ResultP9predicateSo11NSPredicateCvp"></a>
-                    <a name="//apple_ref/swift/Property/predicate" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13PredicateFlow0A6ResultP9predicateSo11NSPredicateCvp">predicate</a>
+                    <a name="/s:10RealmSwift14LinkingObjectsC13PredicateFlowE6filterAA7ResultsCyxGAD0E6Result_pF"></a>
+                    <a name="//apple_ref/swift/Method/filter(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RealmSwift14LinkingObjectsC13PredicateFlowE6filterAA7ResultsCyxGAD0E6Result_pF">filter(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -203,14 +202,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The predicate.</p>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">predicate</span><span class="p">:</span> <span class="kt">NSPredicate</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">filter</span><span class="p">(</span><span class="n">_</span> <span class="nv">predicateResult</span><span class="p">:</span> <span class="kt"><a href="../Protocols/PredicateResult.html">PredicateResult</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Results</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -220,9 +219,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13PredicateFlow0A6ResultP12stringFormatSSvp"></a>
-                    <a name="//apple_ref/swift/Property/stringFormat" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13PredicateFlow0A6ResultP12stringFormatSSvp">stringFormat</a>
+                    <a name="/s:10RealmSwift14LinkingObjectsC13PredicateFlowE6sortedAA7ResultsCyxGAA14SortDescriptorVd_tF"></a>
+                    <a name="//apple_ref/swift/Method/sorted(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RealmSwift14LinkingObjectsC13PredicateFlowE6sortedAA7ResultsCyxGAA14SortDescriptorVd_tF">sorted(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -230,133 +229,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The string format of this predicate result.</p>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">stringFormat</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:13PredicateFlow0A6ResultP9argumentsSayypGvp"></a>
-                    <a name="//apple_ref/swift/Property/arguments" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13PredicateFlow0A6ResultP9argumentsSayypGvp">arguments</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The arguments of this predicate results.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">arguments</span><span class="p">:</span> <span class="p">[</span><span class="kt">Any</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:13PredicateFlow0A6ResultPAAE5querySo11NSPredicateCyF"></a>
-                    <a name="//apple_ref/swift/Method/query()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13PredicateFlow0A6ResultPAAE5querySo11NSPredicateCyF">query()</a>
-                    </code>
-                      <span class="declaration-note">
-                        Extension method
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Alias for predicate.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">query</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">NSPredicate</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:s23CustomStringConvertibleP11descriptionSSvp"></a>
-                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
-                    <a class="token" href="#/s:s23CustomStringConvertibleP11descriptionSSvp">description</a>
-                    </code>
-                      <span class="declaration-note">
-                        Extension method
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:s28CustomDebugStringConvertibleP16debugDescriptionSSvp"></a>
-                    <a name="//apple_ref/swift/Property/debugDescription" class="dashAnchor"></a>
-                    <a class="token" href="#/s:s28CustomDebugStringConvertibleP16debugDescriptionSSvp">debugDescription</a>
-                    </code>
-                      <span class="declaration-note">
-                        Extension method
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">debugDescription</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sorted</span><span class="p">(</span><span class="n">_</span> <span class="nv">sortDescriptions</span><span class="p">:</span> <span class="kt">SortDescriptor</span><span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Results</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>

@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           PredicateFlow Docs
         </a>
-         (82% documented)
+         (81% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -103,6 +103,9 @@
             <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/LinkingObjects.html">LinkingObjects</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/List.html">List</a>
               </li>
               <li class="nav-group-task">
@@ -142,6 +145,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/PredicateField.html">PredicateField</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PredicatePropertyBuilder.html">PredicatePropertyBuilder</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/PredicateQuery.html">PredicateQuery</a>
@@ -187,6 +193,33 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:13PredicateFlow09GeneratedA6SchemaP20compoundFieldBuilderAA08CompoundfG0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/compoundFieldBuilder" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13PredicateFlow09GeneratedA6SchemaP20compoundFieldBuilderAA08CompoundfG0Cvp">compoundFieldBuilder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Use the builder property if you need to build a predicate property</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">compoundFieldBuilder</span><span class="p">:</span> <span class="kt"><a href="../Classes.html#/s:13PredicateFlow20CompoundFieldBuilderC">CompoundFieldBuilder</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:13PredicateFlow09GeneratedA6SchemaPxAA20CompoundFieldBuilderC08compoundfG0_tcfc"></a>
                     <a name="//apple_ref/swift/Method/init(compoundFieldBuilder:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:13PredicateFlow09GeneratedA6SchemaPxAA20CompoundFieldBuilderC08compoundfG0_tcfc">init(compoundFieldBuilder:)</a>
@@ -205,33 +238,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">compoundFieldBuilder</span><span class="p">:</span> <span class="kt"><a href="../Classes.html#/s:13PredicateFlow20CompoundFieldBuilderC">CompoundFieldBuilder</a></span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:13PredicateFlow09GeneratedA6SchemaP10entityNameSSvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/entityName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13PredicateFlow09GeneratedA6SchemaP10entityNameSSvpZ">entityName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The entity name of the related schema. (e.g: if you define a class/struct Dog, this library will generate a related DogSchema that implements this protocol).</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">entityName</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -272,6 +278,37 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13PredicateFlow09GeneratedA6SchemaPAAE7builderAA0A15PropertyBuilder_pvp"></a>
+                    <a name="//apple_ref/swift/Property/builder" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13PredicateFlow09GeneratedA6SchemaPAAE7builderAA0A15PropertyBuilder_pvp">builder</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A builder to create a new predicate property.
+If the code generator does not generate correctly a property, you can use this builder to create a new predicate property.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">builder</span><span class="p">:</span> <span class="kt"><a href="../Protocols/PredicatePropertyBuilder.html">PredicatePropertyBuilder</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -280,7 +317,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://twitter.com/a_delfante" target="_blank" rel="external">andreadelfante</a>. All rights reserved. (Last updated: 2018-08-17)</p>
+      <p>&copy; 2018 <a class="link" href="https://twitter.com/a_delfante" target="_blank" rel="external">andreadelfante</a>. All rights reserved. (Last updated: 2018-09-15)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
