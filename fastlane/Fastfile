@@ -3,25 +3,20 @@ default_platform(:ios)
 setup_travis
 cocoapods(
   podfile: "./Example/Podfile",
-  try_repo_update_on_error: true
+  try_repo_update_on_error: true,
+  silent: true
 )
-
 
 platform :ios do
 
   desc "Linting..."
   lane :linting do
-    ["PredicateFlow", "PredicateFlow-Realm"].each do |path|
-      puts "Linting '#{path}'..."
-
-      swiftlint(
-        mode: :lint,
-        executable: "Example/Pods/SwiftLint/swiftlint",
-        path: path,
-        quiet: true,
-        ignore_exit_status: true
-      )
-    end
+    swiftlint(
+      mode: :lint,
+      executable: "Example/Pods/SwiftLint/swiftlint",
+      config_file: ".swiftlint.yml",
+      quiet: true
+    )
     
     pod_lib_lint(
       verbose: true,
@@ -31,16 +26,11 @@ platform :ios do
 
   desc "Linting and fixing..."
   lane :linting_fixing do
-    ["PredicateFlow", "PredicateFlow-Realm"].each do |path|
-      puts "Linting and fixing '#{path}'..."
-
-      swiftlint(
-        mode: :autocorrect,
-        executable: "Example/Pods/SwiftLint/swiftlint",
-        path: path,
-        quiet: true
-      )
-    end
+    swiftlint(
+      mode: :autocorrect,
+      executable: "Example/Pods/SwiftLint/swiftlint",
+      config_file: ".swiftlint.yml"
+    )
   end
 
   desc "Run tests for PredicateFlow"
@@ -56,10 +46,11 @@ platform :ios do
     xcov(
       workspace: "Example/PredicateFlow.xcworkspace",
       scheme: "PredicateFlow-Example",
-      html_report: true,
-      json_report: true,
+      html_report: false,
+      json_report: false,
       markdown_report: true,
-      derived_data_path: "./build"
+      derived_data_path: "./build",
+      coveralls_repo_token: "BDP7tiAY4KMFYQbgdfGc2SJRRYBSA9Pr5"
     )
   end
 

@@ -21,3 +21,8 @@ class Person: PredicateSchema {
 	private var dogs: [Dog] = []
     private var attributes: [String] = []
 }
+
+extension PersonSchema {
+    var sex: PredicateProperty<Person.Sex> { return builder.generic("sex") }
+    static var sex: PredicateProperty<Person.Sex> { return PersonSchema().sex }
+}

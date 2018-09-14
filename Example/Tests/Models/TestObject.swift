@@ -34,19 +34,9 @@ class TestObject: Object, PredicateSchema {
 
 extension TestObjectSchema {
     
-    var children: CollectionProperty<TestObjectSchema> {
-        return CollectionProperty("children", compoundFieldBuilder)
-    }
+    var children: CollectionProperty<TestObjectSchema> { return builder.collection("children") }
+    static var children: CollectionProperty<TestObjectSchema> { return TestObjectSchema().children }
     
-    static var children: CollectionProperty<TestObjectSchema> {
-        return TestObjectSchema().children
-    }
-    
-    var parent: CollectionProperty<TestObjectSchema> {
-        return CollectionProperty("parent", compoundFieldBuilder)
-    }
-    
-    static var parent: CollectionProperty<TestObjectSchema> {
-        return TestObjectSchema().parent
-    }
+    var parent: CollectionProperty<TestObjectSchema> { return builder.collection("parent") }
+    static var parent: CollectionProperty<TestObjectSchema> { return TestObjectSchema().parent }
 }

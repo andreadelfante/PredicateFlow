@@ -1,0 +1,19 @@
+disabled_rules:
+  - operator_whitespace
+
+included:
+  - PredicateFlow
+  - PredicateFlow-Realm
+
+excluded:
+  - Example/Pods
+  - ./**/*.generated.swift
+
+line_length: 300
+
+file_length:
+  warning: 500
+  error: 1200
+
+reporter: "xcode"
+
