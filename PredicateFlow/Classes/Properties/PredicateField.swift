@@ -43,7 +43,7 @@ public class CompoundablePredicateField: PredicateField {
 
         - parameter name: The field name.
     */
-	public convenience init(_ name: String) {
+	convenience init(_ name: String) {
 		self.init(name, CompoundFieldBuilder())
 	}
 
@@ -53,7 +53,7 @@ public class CompoundablePredicateField: PredicateField {
         - parameter name: The field name.
         - parameter compoundFieldBuilder: The prev builder to concatenate this field name.
     */
-	public convenience init(_ name: String, _ compoundFieldBuilder: CompoundFieldBuilder) {
+	convenience init(_ name: String, _ compoundFieldBuilder: CompoundFieldBuilder) {
 		self.init(compoundFieldBuilder)
 		compoundFieldBuilder.append(name)
 	}
@@ -63,7 +63,7 @@ public class CompoundablePredicateField: PredicateField {
 	
 		- parameter compoundFieldBuilder: The prev builder to concatenate this field name.
 	*/
-	internal init(_ compoundFieldBuilder: CompoundFieldBuilder) {
+	init(_ compoundFieldBuilder: CompoundFieldBuilder) {
 		self.compoundFieldBuilder = compoundFieldBuilder
 	}
 

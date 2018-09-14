@@ -1,6 +1,6 @@
 Pod::Spec.new do |pf|
   pf.name             = 'PredicateFlow'
-  pf.version          = '1.0.3'
+  pf.version          = '1.1.0'
   pf.summary          = 'Flowable NSPredicate. Written in Swift.'
 
   pf.description      = <<-DESC
@@ -22,7 +22,7 @@ Pod::Spec.new do |pf|
 
   pf.default_subspec = 'Basic'  
 
-  pf.dependency 'Sourcery', '~> 0.13.1'
+  pf.dependency 'Sourcery', '~> 0.14.0'
 
   pf.subspec 'Basic' do |basic|
     basic.source_files = 'PredicateFlow/Classes/**/*'

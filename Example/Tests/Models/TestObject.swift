@@ -16,6 +16,7 @@ class TestObject: Object, PredicateSchema {
     @objc dynamic var int: Int = 0
     @objc dynamic var date: Date?
     let children = List<TestObject>()
+    let parent = LinkingObjects<TestObject>(fromType: TestObject.self, property: "children")
     
     convenience init(key: Int, string: String, int: Int, date: Date? = nil) {
         self.init()
@@ -33,11 +34,9 @@ class TestObject: Object, PredicateSchema {
 
 extension TestObjectSchema {
     
-    var children: CollectionProperty<TestObjectSchema> {
-        return CollectionProperty("children", compoundFieldBuilder)
-    }
+    var children: CollectionProperty<TestObjectSchema> { return builder.collection("children") }
+    static var children: CollectionProperty<TestObjectSchema> { return TestObjectSchema().children }
     
-    static var children: CollectionProperty<TestObjectSchema> {
-        return TestObjectSchema().children
-    }
+    var parent: CollectionProperty<TestObjectSchema> { return builder.collection("parent") }
+    static var parent: CollectionProperty<TestObjectSchema> { return TestObjectSchema().parent }
 }

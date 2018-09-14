@@ -1,3 +1,6 @@
 Pods/
 *.lock
 *.xcworkspace
+
+Tests/PredicateFlow.stencil
+Tests/PredicateSchema.swift

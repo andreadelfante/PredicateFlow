@@ -20,6 +20,6 @@ struct SubQuery<T: GeneratedPredicateSchema>: PredicateQuery {
     }
 
 	func execute() -> CollectionProperty<T> {
-		return CollectionProperty<T>("SUBQUERY(\(field), \(subqueryProperty.name), \(result.query()))")
+        return CollectionProperty<T>("SUBQUERY(\(field), \(subqueryProperty.name), \(result.predicate))")
 	}
 }

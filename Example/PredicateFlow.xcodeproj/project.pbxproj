@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		652A13782138938C00BB34F7 /* LinkingObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652A13772138938C00BB34F7 /* LinkingObjectTests.swift */; };
 		6545209F20A3743D005362FD /* PredicateBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6545209E20A3743D005362FD /* PredicateBuilderTests.swift */; };
 		65849694211C590A00D5119A /* PredicatePropertyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65849693211C590A00D5119A /* PredicatePropertyTests.swift */; };
 		65849696211C598C00D5119A /* BasicComparisonQueryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65849695211C598C00D5119A /* BasicComparisonQueryTests.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		607FACE51AFB9204008FA782 /* PredicateFlow_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PredicateFlow_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		652A13772138938C00BB34F7 /* LinkingObjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkingObjectTests.swift; sourceTree = "<group>"; };
 		6545209E20A3743D005362FD /* PredicateBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredicateBuilderTests.swift; sourceTree = "<group>"; };
 		65849693211C590A00D5119A /* PredicatePropertyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredicatePropertyTests.swift; sourceTree = "<group>"; };
 		65849695211C598C00D5119A /* BasicComparisonQueryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicComparisonQueryTests.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				65E11DDF2126D8880029FB3E /* SortDescriptorTests.swift */,
 				65E11DE72126DDD10029FB3E /* ResultsTests.swift */,
 				65E11DE92126E2F30029FB3E /* ListTests.swift */,
+				652A13772138938C00BB34F7 /* LinkingObjectTests.swift */,
 			);
 			path = "PredicateFlow-Realm";
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "PredicateFlow_Tests" */;
 			buildPhases = (
 				9A57FEA9A39798F307051D72 /* [CP] Check Pods Manifest.lock */,
+				65DFC6AC214C4AD600563739 /* Prep For PredicateFlow */,
 				914BF26C20409C9000C835D3 /* PredicateFlow */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
@@ -258,6 +262,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		65DFC6AC214C4AD600563739 /* Prep For PredicateFlow */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Prep For PredicateFlow";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# clean old files\nrm \"$SRCROOT/Tests/PredicateFlow.stencil\"\nrm \"$SRCROOT/Tests/PredicateSchema.swift\"\n\n\n# copy files\ncp \"$SRCROOT/../PredicateFlow/Templates/PredicateFlow.stencil\" \"$SRCROOT/Tests\"\ncp \"$SRCROOT/../PredicateFlow/Classes/Utils/PredicateSchema.swift\" \"$SRCROOT/Tests\"";
+		};
 		914BF26C20409C9000C835D3 /* PredicateFlow */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -270,7 +288,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo \"$SRCROOT/Tests/PredicateFlow.stencil\" \n\"$PODS_ROOT/Sourcery/bin/sourcery\" --sources \"$SRCROOT/Tests\" --templates \"$SRCROOT/Tests/PredicateFlow.stencil\" --output \"$SRCROOT/Tests/Models/PredicateFlow.generated.swift\" --disableCache";
+			shellScript = "\"$PODS_ROOT/Sourcery/bin/sourcery\" --sources \"$SRCROOT/Tests\" --templates \"$SRCROOT/Tests/PredicateFlow.stencil\" --output \"$SRCROOT/Tests/Models/PredicateFlow.generated.swift\" --disableCache";
 		};
 		9A57FEA9A39798F307051D72 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -336,6 +354,7 @@
 				6545209F20A3743D005362FD /* PredicateBuilderTests.swift in Sources */,
 				658496A2211C618100D5119A /* SubqueryPropertyTests.swift in Sources */,
 				6584969B211C5F0400D5119A /* BoolPredicatePropertyTests.swift in Sources */,
+				652A13782138938C00BB34F7 /* LinkingObjectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
