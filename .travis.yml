@@ -15,6 +15,10 @@ cache:
   cocoapods: true
   directories:
   - ./build
+  - ./Gemfile.lock
+  - ./Example/Pods
+  - ./Example/PredicateFlow.xcworkspace
+  - ./Example/Podfile.lock
 
 jobs:
   include:
