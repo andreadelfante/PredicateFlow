@@ -1,7 +1,3 @@
-# references:
-# * http://www.objc.io/issue-6/travis-ci.html
-# * https://github.com/supermarin/xcpretty#usage
-
 osx_image: xcode10
 language: swift
 
@@ -17,7 +13,6 @@ cache:
   - ./build
   - ./Example/Pods
   - ./Example/PredicateFlow.xcworkspace
-  - ./Example/Podfile.lock
 
 jobs:
   include:
