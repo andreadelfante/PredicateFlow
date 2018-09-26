@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "0900"
-   version = "1.8">
+   version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <PreActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "# Ty# clean old files&#10;rm &quot;$SRCROOT/Tests/PredicateFlow.stencil&quot;&#10;rm &quot;$SRCROOT/Tests/PredicateSchema.swift&quot;&#10;&#10;&#10;# copy files&#10;cp &quot;$SRCROOT/../PredicateFlow/Templates/PredicateFlow.stencil&quot; &quot;$SRCROOT/Tests&quot;&#10;cp &quot;$SRCROOT/../PredicateFlow/Classes/Utils/PredicateSchema.swift&quot; &quot;$SRCROOT/Tests&quot;&#10;pe a script or drag a script file from your workspace to insert its path.&#10;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "607FACE41AFB9204008FA782"
+                     BuildableName = "PredicateFlow_Tests.xctest"
+                     BlueprintName = "PredicateFlow_Tests"
+                     ReferencedContainer = "container:PredicateFlow.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PreActions>
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
@@ -40,10 +58,18 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
-      shouldUseLaunchSchemeArgsEnv = "YES"
       codeCoverageEnabled = "YES"
-      onlyGenerateCoverageForSpecifiedTargets = "YES">
+      onlyGenerateCoverageForSpecifiedTargets = "YES"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "EDEC98C74EEB9DB58CF46ACB5774354C"
+            BuildableName = "PredicateFlow.framework"
+            BlueprintName = "PredicateFlow"
+            ReferencedContainer = "container:Pods/Pods.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -67,21 +93,11 @@
       </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
-      <CodeCoverageTargets>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8410BB6BB0A128DD5A29A731CE489E3A"
-            BuildableName = "PredicateFlow.framework"
-            BlueprintName = "PredicateFlow"
-            ReferencedContainer = "container:Pods/Pods.xcodeproj">
-         </BuildableReference>
-      </CodeCoverageTargets>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"

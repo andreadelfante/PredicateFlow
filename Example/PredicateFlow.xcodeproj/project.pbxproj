@@ -197,7 +197,6 @@
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "PredicateFlow_Tests" */;
 			buildPhases = (
 				9A57FEA9A39798F307051D72 /* [CP] Check Pods Manifest.lock */,
-				65DFC6AC214C4AD600563739 /* Prep For PredicateFlow */,
 				914BF26C20409C9000C835D3 /* PredicateFlow */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
@@ -260,22 +259,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		65DFC6AC214C4AD600563739 /* Prep For PredicateFlow */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Prep For PredicateFlow";
-			outputPaths = (
-				$SRCROOT/Tests/PredicateFlow.stencil,
-				$SRCROOT/Tests/PredicateSchema.swift,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# clean old files\nrm \"$SRCROOT/Tests/PredicateFlow.stencil\"\nrm \"$SRCROOT/Tests/PredicateSchema.swift\"\n\n\n# copy files\ncp \"$SRCROOT/../PredicateFlow/Templates/PredicateFlow.stencil\" \"$SRCROOT/Tests\"\ncp \"$SRCROOT/../PredicateFlow/Classes/Utils/PredicateSchema.swift\" \"$SRCROOT/Tests\"\n";
-		};
 		914BF26C20409C9000C835D3 /* PredicateFlow */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
