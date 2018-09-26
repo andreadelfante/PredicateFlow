@@ -1,6 +1,6 @@
 Pod::Spec.new do |pf|
   pf.name             = 'PredicateFlow'
-  pf.version          = '1.1.0'
+  pf.version          = '1.1.1'
   pf.summary          = 'Flowable NSPredicate. Written in Swift.'
 
   pf.description      = <<-DESC
@@ -13,7 +13,7 @@ Pod::Spec.new do |pf|
   pf.requires_arc     = true
   pf.source           = { :git => 'https://github.com/andreadelfante/PredicateFlow.git', :tag => pf.version.to_s }
 
-  pf.swift_version = '4.0'
+  pf.swift_version = '4.2'
 
   pf.ios.deployment_target = '8.0'
   pf.osx.deployment_target = '10.9'
@@ -22,7 +22,7 @@ Pod::Spec.new do |pf|
 
   pf.default_subspec = 'Basic'  
 
-  pf.dependency 'Sourcery', '~> 0.14.0'
+  pf.dependency 'Sourcery', '~> 0.15.0'
 
   pf.subspec 'Basic' do |basic|
     basic.source_files = 'PredicateFlow/Classes/**/*'

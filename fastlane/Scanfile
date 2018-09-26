@@ -1,0 +1,17 @@
+device "iPhone 8"
+
+workspace "Example/PredicateFlow.xcworkspace"
+scheme "PredicateFlow-Example"
+
+code_coverage true
+skip_slack true
+
+derived_data_path "./build"
+
+for_lane :test_debug do
+  configuration "Debug"
+end
+
+for_lane :test_release do
+  configuration "Release"
+end

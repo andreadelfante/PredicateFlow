@@ -2,7 +2,7 @@
 # * http://www.objc.io/issue-6/travis-ci.html
 # * https://github.com/supermarin/xcpretty#usage
 
-osx_image: xcode9.4
+osx_image: xcode10
 language: swift
 
 env:
@@ -21,4 +21,7 @@ jobs:
     - stage: lint
       script: bundle exec fastlane linting
     - stage: test
-      script: bundle exec fastlane test
+      name: "Test (Debug)"
+      script: bundle exec fastlane test_debug
+      name: "Test (Release)"
+      script: bundle exec fastlane test_release
