@@ -269,10 +269,12 @@
 			);
 			name = "Prep For PredicateFlow";
 			outputPaths = (
+				$SRCROOT/Tests/PredicateFlow.stencil,
+				$SRCROOT/Tests/PredicateSchema.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# clean old files\nrm \"$SRCROOT/Tests/PredicateFlow.stencil\"\nrm \"$SRCROOT/Tests/PredicateSchema.swift\"\n\n\n# copy files\ncp \"$SRCROOT/../PredicateFlow/Templates/PredicateFlow.stencil\" \"$SRCROOT/Tests\"\ncp \"$SRCROOT/../PredicateFlow/Classes/Utils/PredicateSchema.swift\" \"$SRCROOT/Tests\"";
+			shellScript = "# clean old files\nrm \"$SRCROOT/Tests/PredicateFlow.stencil\"\nrm \"$SRCROOT/Tests/PredicateSchema.swift\"\n\n\n# copy files\ncp \"$SRCROOT/../PredicateFlow/Templates/PredicateFlow.stencil\" \"$SRCROOT/Tests\"\ncp \"$SRCROOT/../PredicateFlow/Classes/Utils/PredicateSchema.swift\" \"$SRCROOT/Tests\"\n";
 		};
 		914BF26C20409C9000C835D3 /* PredicateFlow */ = {
 			isa = PBXShellScriptBuildPhase;
