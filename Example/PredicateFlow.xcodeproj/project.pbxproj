@@ -16,16 +16,15 @@
 		6584969D211C5FE200D5119A /* ObjectPropertyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584969C211C5FE200D5119A /* ObjectPropertyTests.swift */; };
 		658496A0211C602F00D5119A /* CollectionPropertyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584969F211C602F00D5119A /* CollectionPropertyTests.swift */; };
 		658496A2211C618100D5119A /* SubqueryPropertyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658496A1211C618100D5119A /* SubqueryPropertyTests.swift */; };
+		65AAA965215C002700DCB3BE /* PredicateFlow.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AAA964215C002600DCB3BE /* PredicateFlow.generated.swift */; };
 		65E11DE02126D8880029FB3E /* SortDescriptorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E11DDF2126D8880029FB3E /* SortDescriptorTests.swift */; };
 		65E11DE42126D9960029FB3E /* TestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E11DE32126D9960029FB3E /* TestObject.swift */; };
 		65E11DE62126DAAD0029FB3E /* PredicateFlowRealmBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E11DE52126DAAD0029FB3E /* PredicateFlowRealmBaseTests.swift */; };
 		65E11DE82126DDD10029FB3E /* ResultsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E11DE72126DDD10029FB3E /* ResultsTests.swift */; };
 		65E11DEA2126E2F30029FB3E /* ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E11DE92126E2F30029FB3E /* ListTests.swift */; };
 		65E11DED2127039D0029FB3E /* PredicateFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E11DEC2127039D0029FB3E /* PredicateFieldTests.swift */; };
-		91142368204173BD008A67A2 /* PredicateFlow.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91142367204173BD008A67A2 /* PredicateFlow.generated.swift */; };
 		914BF26A20409C8900C835D3 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914BF26620409C8900C835D3 /* Dog.swift */; };
 		914BF26B20409C8900C835D3 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914BF26720409C8900C835D3 /* Person.swift */; };
-		914BF26D20409D2D00C835D3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 607FACEA1AFB9204008FA782 /* Info.plist */; };
 		CD2A375AB2CACB27A7736E38 /* Pods_PredicateFlow_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6EFA951DB670FD3045A7540 /* Pods_PredicateFlow_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +40,7 @@
 		6584969C211C5FE200D5119A /* ObjectPropertyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectPropertyTests.swift; sourceTree = "<group>"; };
 		6584969F211C602F00D5119A /* CollectionPropertyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPropertyTests.swift; sourceTree = "<group>"; };
 		658496A1211C618100D5119A /* SubqueryPropertyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubqueryPropertyTests.swift; sourceTree = "<group>"; };
+		65AAA964215C002600DCB3BE /* PredicateFlow.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredicateFlow.generated.swift; sourceTree = "<group>"; };
 		65E11DDF2126D8880029FB3E /* SortDescriptorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortDescriptorTests.swift; sourceTree = "<group>"; };
 		65E11DE32126D9960029FB3E /* TestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestObject.swift; sourceTree = "<group>"; };
 		65E11DE52126DAAD0029FB3E /* PredicateFlowRealmBaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredicateFlowRealmBaseTests.swift; sourceTree = "<group>"; };
@@ -49,7 +49,6 @@
 		65E11DEC2127039D0029FB3E /* PredicateFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredicateFieldTests.swift; sourceTree = "<group>"; };
 		66ED4B80FFDC6CD9CC2BD239 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		8363EB2C7C79BD597BA70D12 /* Pods-PredicateFlow_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PredicateFlow_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PredicateFlow_Tests/Pods-PredicateFlow_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		91142367204173BD008A67A2 /* PredicateFlow.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredicateFlow.generated.swift; sourceTree = "<group>"; };
 		9136718D709513FD27529BBA /* PredicateFlow.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PredicateFlow.podspec; path = ../PredicateFlow.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		914BF26620409C8900C835D3 /* Dog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 		914BF26720409C8900C835D3 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -182,7 +181,7 @@
 		914BF26320409C7B00C835D3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				91142367204173BD008A67A2 /* PredicateFlow.generated.swift */,
+				65AAA964215C002600DCB3BE /* PredicateFlow.generated.swift */,
 				914BF26620409C8900C835D3 /* Dog.swift */,
 				914BF26720409C8900C835D3 /* Person.swift */,
 				65E11DE32126D9960029FB3E /* TestObject.swift */,
@@ -198,7 +197,6 @@
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "PredicateFlow_Tests" */;
 			buildPhases = (
 				9A57FEA9A39798F307051D72 /* [CP] Check Pods Manifest.lock */,
-				65DFC6AC214C4AD600563739 /* Prep For PredicateFlow */,
 				914BF26C20409C9000C835D3 /* PredicateFlow */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
@@ -226,7 +224,7 @@
 				TargetAttributes = {
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = D56D4DKN44;
+						DevelopmentTeam = MBHU4L699G;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -255,27 +253,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				914BF26D20409D2D00C835D3 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		65DFC6AC214C4AD600563739 /* Prep For PredicateFlow */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Prep For PredicateFlow";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# clean old files\nrm \"$SRCROOT/Tests/PredicateFlow.stencil\"\nrm \"$SRCROOT/Tests/PredicateSchema.swift\"\n\n\n# copy files\ncp \"$SRCROOT/../PredicateFlow/Templates/PredicateFlow.stencil\" \"$SRCROOT/Tests\"\ncp \"$SRCROOT/../PredicateFlow/Classes/Utils/PredicateSchema.swift\" \"$SRCROOT/Tests\"";
-		};
 		914BF26C20409C9000C835D3 /* PredicateFlow */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -285,10 +268,11 @@
 			);
 			name = PredicateFlow;
 			outputPaths = (
+				$SRCROOT/Tests/Models/PredicateFlow.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/Sourcery/bin/sourcery\" --sources \"$SRCROOT/Tests\" --templates \"$SRCROOT/Tests/PredicateFlow.stencil\" --output \"$SRCROOT/Tests/Models/PredicateFlow.generated.swift\" --disableCache";
+			shellScript = "\"$PODS_ROOT/Sourcery/bin/sourcery\" --sources \"$SRCROOT/Tests\" --templates \"$SRCROOT/Tests/PredicateFlow.stencil\" --output \"$SRCROOT/Tests/Models/PredicateFlow.generated.swift\" --disableCache\n";
 		};
 		9A57FEA9A39798F307051D72 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -314,7 +298,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PredicateFlow_Tests/Pods-PredicateFlow_Tests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-PredicateFlow_Tests/Pods-PredicateFlow_Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/PredicateFlow/PredicateFlow.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
@@ -327,7 +311,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PredicateFlow_Tests/Pods-PredicateFlow_Tests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PredicateFlow_Tests/Pods-PredicateFlow_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -337,8 +321,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65AAA965215C002700DCB3BE /* PredicateFlow.generated.swift in Sources */,
 				914BF26B20409C8900C835D3 /* Person.swift in Sources */,
-				91142368204173BD008A67A2 /* PredicateFlow.generated.swift in Sources */,
 				65E11DE02126D8880029FB3E /* SortDescriptorTests.swift in Sources */,
 				6584969D211C5FE200D5119A /* ObjectPropertyTests.swift in Sources */,
 				65E11DE82126DDD10029FB3E /* ResultsTests.swift in Sources */,
@@ -411,6 +395,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -456,6 +441,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -464,7 +450,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 960FB04CFB5D025BDD628403 /* Pods-PredicateFlow_Tests.debug.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = D56D4DKN44;
+				DEVELOPMENT_TEAM = MBHU4L699G;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -478,7 +464,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -486,7 +472,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8363EB2C7C79BD597BA70D12 /* Pods-PredicateFlow_Tests.release.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = D56D4DKN44;
+				DEVELOPMENT_TEAM = MBHU4L699G;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -496,7 +482,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

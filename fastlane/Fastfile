@@ -33,24 +33,22 @@ platform :ios do
     )
   end
 
-  desc "Run tests for PredicateFlow"
-  lane :test do
-    run_tests(
-      device: "iPhone 6s",
-      workspace: "Example/PredicateFlow.xcworkspace",
-      scheme: "PredicateFlow-Example",
-      code_coverage: true,
-      skip_slack: true,
-      derived_data_path: "./build"
-    )
+  desc "Run tests for PredicateFlow (Debug config)"
+  lane :test_debug do
+    run_tests
+  end
+
+  desc "Run tests for PredicateFlow (Release config)"
+  lane :test_release do
+    run_tests
+
     xcov(
       workspace: "Example/PredicateFlow.xcworkspace",
       scheme: "PredicateFlow-Example",
       html_report: false,
       json_report: false,
       markdown_report: true,
-      derived_data_path: "./build",
-      coveralls_repo_token: "BDP7tiAY4KMFYQbgdfGc2SJRRYBSA9Pr5"
+      derived_data_path: "./build"
     )
   end
 

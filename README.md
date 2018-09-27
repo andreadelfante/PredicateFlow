@@ -29,6 +29,10 @@ Write amazing, strong-typed and easy-to-read NSPredicate. This library allows yo
    ```
    "$PODS_ROOT/Sourcery/bin/sourcery" --sources "$PODS_ROOT/PredicateFlow/PredicateFlow/Classes/Utils/" --sources "$SRCROOT" --templates "$PODS_ROOT/PredicateFlow/PredicateFlow/Templates/PredicateFlow.stencil" --output "$SRCROOT/PredicateFlow.generated.swift"
    ```
+   For Xcode 10 only, add a new `Output Files` and paste the following:
+   ```
+   $SRCROOT/PredicateFlow.generated.swift
+   ```
 4. Build your project. In Finder you will now see a `PredicateFlow.generated.swift` in the `$SRCROOT`-folder, drag the `PredicateFlow.generated.swift` files into your project and **uncheck** `Copy items if needed`
 
 _Tip:_ Add the `*.generated.swift` pattern to your `.gitignore` file to prevent unnecessary conflicts.

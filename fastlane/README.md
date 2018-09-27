@@ -26,11 +26,16 @@ Linting...
 fastlane ios linting_fixing
 ```
 Linting and fixing...
-### ios test
+### ios test_debug
 ```
-fastlane ios test
+fastlane ios test_debug
 ```
-Run tests for PredicateFlow
+Run tests for PredicateFlow (Debug config)
+### ios test_release
+```
+fastlane ios test_release
+```
+Run tests for PredicateFlow (Release config)
 ### ios documentation
 ```
 fastlane ios documentation
