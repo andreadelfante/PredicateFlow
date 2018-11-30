@@ -68,8 +68,8 @@ class ResultsTests: PredicateFlowRealmBaseTests {
     }
     
     func testAverage() {
-        let expected: Int = realm.objects(TestObject.self).average(ofProperty: "int")!
-        let result: Int = realm.objects(TestObject.self).average(TestObjectSchema.int)!
+        let expected: Double = realm.objects(TestObject.self).average(ofProperty: "int")!
+        let result: Double = realm.objects(TestObject.self).average(TestObjectSchema.int)!
         
         XCTAssertEqual(expected, result)
     }
