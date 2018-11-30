@@ -1,3 +1,9 @@
+1.1.2 Release notes (2018-12-01)
+=============================================================
+
+### Enhancements
+* Add support for min, max, average, sum in PredicateFlow/Realm.
+
 1.1.1 Release notes (2018-09-27)
 =============================================================
 

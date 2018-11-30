@@ -17,10 +17,15 @@ cache:
 jobs:
   include:
     - stage: lint
-      script: bundle exec fastlane linting
+      name: "Code quality"
+      script: bundle exec fastlane code_lint
+    - stage: lint
+      name: "Podspec quality"
+      script: bundle exec fastlane podspec_lint
     - stage: test
       name: "Test (Debug)"
       script: bundle exec fastlane test_debug
     - stage: test
       name: "Test (Release)"
       script: bundle exec fastlane test_release
+

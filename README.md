@@ -1,11 +1,10 @@
 # PredicateFlow
 
 [![Build Status](https://travis-ci.org/andreadelfante/PredicateFlow.svg?branch=master)](https://travis-ci.org/andreadelfante/PredicateFlow)
-[![Coverage Status](https://coveralls.io/repos/github/andreadelfante/PredicateFlow/badge.svg?branch=master)](https://coveralls.io/github/andreadelfante/PredicateFlow?branch=master)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/PredicateFlow.svg)](https://cocoapods.org/pods/PredicateFlow)
-![License](https://img.shields.io/cocoapods/l/PredicateFlow.svg?style=flat)
 ![Platform](https://img.shields.io/cocoapods/p/PredicateFlow.svg?style=flat)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
+![License](https://img.shields.io/cocoapods/l/PredicateFlow.svg?style=flat)
 
 Write amazing, strong-typed and easy-to-read NSPredicate. This library allows you to write flowable NSPredicate, without guessing attribution names, predicate operation or writing wrong arguments type.
 
