@@ -49,6 +49,35 @@ class ResultsTests: PredicateFlowRealmBaseTests {
     func testDistinct() {
         let expected = realm.objects(TestObject.self).distinct(by: ["int", "string"])
         let result = realm.objects(TestObject.self).distinct(TestObjectSchema.int, TestObjectSchema.string)
+        
         PFRLMEqual(expected, result)
+    }
+    
+    func testMin() {
+        let expected: Int = realm.objects(TestObject.self).min(ofProperty: "int")!
+        let result: Int = realm.objects(TestObject.self).min(TestObjectSchema.int)!
+        
+        XCTAssertEqual(expected, result)
+    }
+    
+    func testMax() {
+        let expected: Int = realm.objects(TestObject.self).max(ofProperty: "int")!
+        let result: Int = realm.objects(TestObject.self).max(TestObjectSchema.int)!
+        
+        XCTAssertEqual(expected, result)
+    }
+    
+    func testAverage() {
+        let expected: Double = realm.objects(TestObject.self).average(ofProperty: "int")!
+        let result: Double = realm.objects(TestObject.self).average(TestObjectSchema.int)!
+        
+        XCTAssertEqual(expected, result)
+    }
+    
+    func testSum() {
+        let expected: Int = realm.objects(TestObject.self).sum(ofProperty: "int")
+        let result: Int = realm.objects(TestObject.self).sum(TestObjectSchema.int)
+        
+        XCTAssertEqual(expected, result)
     }
 }
