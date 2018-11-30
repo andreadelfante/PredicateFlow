@@ -16,31 +16,16 @@ or alternatively using `brew cask install fastlane`
 
 # Available Actions
 ## iOS
-### ios prep
+### ios linting
 ```
-fastlane ios prep
+fastlane ios linting
 ```
-Prepare and open the workspace
-### ios code_lint
+Linting...
+### ios linting_fixing
 ```
-fastlane ios code_lint
-```
-Perform a code quality...
-### ios podspec_lint
-```
-fastlane ios podspec_lint
-```
-Linting podspec
-### ios auto_fixing
-```
-fastlane ios auto_fixing
+fastlane ios linting_fixing
 ```
 Linting and fixing...
-### ios pods
-```
-fastlane ios pods
-```
-Install dependencies
 ### ios test_debug
 ```
 fastlane ios test_debug
@@ -51,16 +36,16 @@ Run tests for PredicateFlow (Debug config)
 fastlane ios test_release
 ```
 Run tests for PredicateFlow (Release config)
+### ios documentation
+```
+fastlane ios documentation
+```
+Create documentation
 ### ios deploy
 ```
 fastlane ios deploy
 ```
-Deploy a new version
-### ios doc
-```
-fastlane ios doc
-```
-Create documentation
+Deploy to Cocoapods and push tag to master
 
 ----
 

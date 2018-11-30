@@ -17,11 +17,7 @@ cache:
 jobs:
   include:
     - stage: lint
-      name: "Code quality"
-      script: bundle exec fastlane code_lint
-    - stage: lint
-      name: "Lint podspec"
-      script: bundle exec fastlane podspec_lint
+      script: bundle exec fastlane linting
     - stage: test
       name: "Test (Debug)"
       script: bundle exec fastlane test_debug
