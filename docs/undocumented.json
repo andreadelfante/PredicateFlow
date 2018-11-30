@@ -316,6 +316,34 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/Andrea/xCodeProjects/PredicateFlow/PredicateFlow-Realm/Classes/Results+PF.swift",
+      "line": 28,
+      "symbol": "Results.min(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/xCodeProjects/PredicateFlow/PredicateFlow-Realm/Classes/Results+PF.swift",
+      "line": 32,
+      "symbol": "Results.max(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/xCodeProjects/PredicateFlow/PredicateFlow-Realm/Classes/Results+PF.swift",
+      "line": 36,
+      "symbol": "Results.average(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Andrea/xCodeProjects/PredicateFlow/PredicateFlow-Realm/Classes/Results+PF.swift",
+      "line": 40,
+      "symbol": "Results.sum(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/Andrea/xCodeProjects/PredicateFlow/PredicateFlow-Realm/Classes/SortDescriptor+PF.swift",
       "line": 12,
       "symbol": "SortDescriptor.init(_:ascending:)",
