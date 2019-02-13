@@ -272,7 +272,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/Sourcery/bin/sourcery\" --sources \"$SRCROOT/Tests\" --templates \"$SRCROOT/Tests/PredicateFlow.stencil\" --output \"$SRCROOT/Tests/Models/PredicateFlow.generated.swift\" --disableCache\n";
+			shellScript = "\"$PODS_ROOT/Sourcery/bin/sourcery\" --sources \"$SRCROOT/Tests\" --templates \"$SRCROOT/Tests/PredicateFlow-Realm.stencil\" --output \"$SRCROOT/Tests/Models/PredicateFlow.generated.swift\" --disableCache\n";
 		};
 		9A57FEA9A39798F307051D72 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

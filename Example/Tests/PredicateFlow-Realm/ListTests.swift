@@ -41,4 +41,42 @@ class ListTests: PredicateFlowRealmBaseTests {
             PFRLMEqual(expected, result)
         }
     }
+    
+    func testValue() {
+        let expectedInt = (testingElement.children.value(forKeyPath: "int") as [AnyObject]) as! [Int]
+        let resultInt = testingElement.children.value(TestObjectSchema.int) as! [Int]
+        XCTAssertEqual(expectedInt, resultInt)
+        
+        let expectedString = (testingElement.children.value(forKeyPath: "string") as [AnyObject]) as! [String]
+        let resultString = testingElement.children.value(TestObjectSchema.string) as! [String]
+        XCTAssertEqual(expectedString, resultString)
+    }
+    
+    func testMin() {
+        let expected: Int = testingElement.children.min(ofProperty: "int")!
+        let result: Int = testingElement.children.min(TestObjectSchema.int)!
+        
+        XCTAssertEqual(expected, result)
+    }
+    
+    func testMax() {
+        let expected: Int = testingElement.children.max(ofProperty: "int")!
+        let result: Int = testingElement.children.max(TestObjectSchema.int)!
+        
+        XCTAssertEqual(expected, result)
+    }
+    
+    func testAverage() {
+        let expected: Double = testingElement.children.average(ofProperty: "int")!
+        let result: Double = testingElement.children.average(TestObjectSchema.int)!
+        
+        XCTAssertEqual(expected, result)
+    }
+    
+    func testSum() {
+        let expected: Int = testingElement.children.sum(ofProperty: "int")
+        let result: Int = testingElement.children.sum(TestObjectSchema.int)
+        
+        XCTAssertEqual(expected, result)
+    }
 }

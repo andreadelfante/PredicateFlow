@@ -10,7 +10,7 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Run Script"
-               scriptText = "# Ty# clean old files&#10;rm &quot;$SRCROOT/Tests/PredicateFlow.stencil&quot;&#10;rm &quot;$SRCROOT/Tests/PredicateSchema.swift&quot;&#10;&#10;&#10;# copy files&#10;cp &quot;$SRCROOT/../PredicateFlow/Templates/PredicateFlow.stencil&quot; &quot;$SRCROOT/Tests&quot;&#10;cp &quot;$SRCROOT/../PredicateFlow/Classes/Utils/PredicateSchema.swift&quot; &quot;$SRCROOT/Tests&quot;&#10;pe a script or drag a script file from your workspace to insert its path.&#10;">
+               scriptText = "# clean old files&#10;rm &quot;$SRCROOT/Tests/PredicateFlow.stencil&quot;&#10;rm &quot;$SRCROOT/Tests/PredicateFlow-Realm.stencil&quot;&#10;rm &quot;$SRCROOT/Tests/PredicateSchema.swift&quot;&#10;&#10;# clean old generated files&#10;rm &quot;$SRCROOT/Tests/Models/PredicateFlow.generated.swift&quot;&#10;&#10;# copy files&#10;cp &quot;$SRCROOT/../PredicateFlow/Templates/PredicateFlow.stencil&quot; &quot;$SRCROOT/Tests&quot;&#10;cp &quot;$SRCROOT/../PredicateFlow/Templates/PredicateFlow-Realm.stencil&quot; &quot;$SRCROOT/Tests&quot;&#10;cp &quot;$SRCROOT/../PredicateFlow/Classes/Utils/PredicateSchema.swift&quot; &quot;$SRCROOT/Tests&quot;&#10;pe a script or drag a script file from your workspace to insert its path.&#10;">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"
@@ -64,7 +64,7 @@
       <CodeCoverageTargets>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EDEC98C74EEB9DB58CF46ACB5774354C"
+            BlueprintIdentifier = "50A0BE552C35FEAE874C8444D1C2DF92"
             BuildableName = "PredicateFlow.framework"
             BlueprintName = "PredicateFlow"
             ReferencedContainer = "container:Pods/Pods.xcodeproj">

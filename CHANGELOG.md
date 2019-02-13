@@ -1,3 +1,14 @@
+1.2.0 Release notes (2019-02-14)
+=============================================================
+### Breaking Changes
+* Add support to generate fields of type `List` and `LinkingObjects`, if you use `PredicateFlow-Realm.stencil`.
+
+### Enhancements
+* Add new stencil template for PredicateFlow/Realm, `PredicateFlow-Realm.stencil`.
+* Add auto-excluding code quality check of PredicateFlow generated file if you use [SwiftLint](https://github.com/realm/SwiftLint).
+* Add support for min, max, average, sum, value of LinkingObjects and List in PredicateFlow/Realm.
+* Add support to init a LinkingObjects using PredicateField.
+
 1.1.2 Release notes (2018-12-01)
 =============================================================
 

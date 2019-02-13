@@ -28,6 +28,12 @@ Write amazing, strong-typed and easy-to-read NSPredicate. This library allows yo
    ```
    "$PODS_ROOT/Sourcery/bin/sourcery" --sources "$PODS_ROOT/PredicateFlow/PredicateFlow/Classes/Utils/" --sources "$SRCROOT" --templates "$PODS_ROOT/PredicateFlow/PredicateFlow/Templates/PredicateFlow.stencil" --output "$SRCROOT/PredicateFlow.generated.swift"
    ```
+   
+   In case you are using **PredicateFlow-Realm**, past the following  script instead of the above one:
+   ```
+   "$PODS_ROOT/Sourcery/bin/sourcery" --sources "$PODS_ROOT/PredicateFlow/PredicateFlow/Classes/Utils/" --sources "$SRCROOT" --templates "$PODS_ROOT/PredicateFlow/PredicateFlow/Templates/PredicateFlow-Realm.stencil" --output "$SRCROOT/PredicateFlow.generated.swift"
+   ```
+   
    For Xcode 10 only, add a new `Output Files` and paste the following:
    ```
    $SRCROOT/PredicateFlow.generated.swift
@@ -108,17 +114,18 @@ internal struct PersonSchema: GeneratedPredicateSchema {
 To type a floawable NSPredicate, just write:
 ```swift
 DogSchema.age.isEqual(10).query()
+// or
 // Vanilla mode: 
 // NSPredicate("age == %@", 10)
 ```
 You can also write compound predicate, and use deeper fields:
 ```swift
-PredicateBuilder(DogSchema.age.isGreater(than: 10))
+PredicateBuilder(DogSchema.age > 10)
     .and(DogSchema.isHungry.isTrue)
     .and(DogSchema.age.between(1, 10))
-    .and(DogSchema.owner.element().name.isEqual("Foo"))
-    .or(DogSchema.owner.element().dogs.maxElements().age.isGreater(than: 10))
-    .or(DogSchema.owner.element().dogs.anyElements().name.isEqual("Foo"))
+    .and(DogSchema.owner.element().name == "Foo")
+    .or(DogSchema.owner.element().dogs.maxElements().age > 10)
+    .or(DogSchema.owner.element().dogs.anyElements().name == "Foo")
     .build()
     
 // Vanilla mode: 

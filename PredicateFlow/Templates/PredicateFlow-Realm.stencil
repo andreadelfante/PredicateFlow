@@ -1,0 +1,23 @@
+import PredicateFlow
+
+// swiftlint:disable all
+
+{% macro createValueForCollectionProperty variable type %}
+    /// "{{ variable.name }}" property
+    {{ type.accessLevel }} var {{ variable.name }}: CollectionProperty<{{ variable.definedInTypeName.name }}Schema> { return builder.collection("{{ variable.name }}") }
+    /// "{{ variable.name }}" property for static access
+    {{ type.accessLevel }} static var {{ variable.name }}: CollectionProperty<{{ variable.definedInTypeName.name }}Schema> { return {{ type.name }}Schema().{{ variable.name }} }
+{% endmacro %}
+{% for type in types.implementing.PredicateSchema %}
+extension {{ type.name }}Schema {
+{% for variable in type.storedVariables %}
+{% if variable.unwrappedTypeName|hasPrefix:"List" %}
+{% call createValueForCollectionProperty variable type %}
+{% elif variable.unwrappedTypeName|hasPrefix:"LinkingObjects" %}
+{% call createValueForCollectionProperty variable type %}
+{% endif %}
+{% endfor %}
+}
+{% endfor %}
+
+{% include "PredicateFlow.stencil"%}

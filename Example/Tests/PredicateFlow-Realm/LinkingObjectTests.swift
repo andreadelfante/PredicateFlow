@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import RealmSwift
 
 class LinkingObjectTests: PredicateFlowRealmBaseTests {
     
@@ -38,5 +39,43 @@ class LinkingObjectTests: PredicateFlowRealmBaseTests {
             
             PFRLMEqual(expected, result)
         }
+    }
+    
+    func testValue() {
+        let expectedInt = testingElement.parent.value(forKeyPath: "int") as! [Int]
+        let resultInt = testingElement.parent.value(TestObjectSchema.int) as! [Int]
+        XCTAssertEqual(expectedInt, resultInt)
+        
+        let expectedString = testingElement.parent.value(forKeyPath: "string") as! [String]
+        let resultString = testingElement.parent.value(TestObjectSchema.string) as! [String]
+        XCTAssertEqual(expectedString, resultString)
+    }
+    
+    func testMin() {
+        let expected: Int? = testingElement.parent.min(ofProperty: "int")
+        let result: Int? = testingElement.parent.min(TestObjectSchema.int)
+        
+        XCTAssertEqual(expected, result)
+    }
+    
+    func testMax() {
+        let expected: Int? = testingElement.parent.max(ofProperty: "int")
+        let result: Int? = testingElement.parent.max(TestObjectSchema.int)
+        
+        XCTAssertEqual(expected, result)
+    }
+    
+    func testAverage() {
+        let expected: Double? = testingElement.parent.average(ofProperty: "int")
+        let result: Double? = testingElement.parent.average(TestObjectSchema.int)
+        
+        XCTAssertEqual(expected, result)
+    }
+    
+    func testSum() {
+        let expected: Int = testingElement.parent.sum(ofProperty: "int")
+        let result: Int = testingElement.parent.sum(TestObjectSchema.int)
+        
+        XCTAssertEqual(expected, result)
     }
 }
