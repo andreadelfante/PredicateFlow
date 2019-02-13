@@ -1,5 +1,7 @@
 import PredicateFlow
 
+// swiftlint:disable all
+
 {% macro createValueForArrayProperty variable type %}
     /// "{{ variable.name }}" property
     {{ type.accessLevel }} var {{ variable.name }}: CollectionProperty<{{ variable.typeName.array.elementTypeName }}{% if variable.typeName.array.elementType.implements.PredicateSchema %}Schema{% endif %}> { return builder.collection("{{ variable.name }}") }
@@ -47,7 +49,7 @@ import PredicateFlow
 {% elif variable.unwrappedTypeName == "Int" or variable.unwrappedTypeName == "Float" or variable.unwrappedTypeName == "Double" or variable.unwrappedTypeName == "Date" or variable.unwrappedTypeName == "UInt" or variable.unwrappedTypeName == "Int8" or variable.unwrappedTypeName == "UInt8" or variable.unwrappedTypeName == "Int16" or variable.unwrappedTypeName == "UInt16" or variable.unwrappedTypeName == "Int32" or variable.unwrappedTypeName == "UInt32" or variable.unwrappedTypeName == "Int64" or variable.unwrappedTypeName == "UInt64" %}
 {% call createValueForGenericProperty variable type %}
 {% else %}
-    // [!!!WARNING!!!] Error generating PredicateProperty for "{{ variable.name }}" [type: {{ variable.unwrappedTypeName }}]
+    // [!!!WARNING!!!] Skipping "{{ variable.name }}" [type: {{ variable.unwrappedTypeName }}]
 {% endif %}
 {% endfor %}
 }
