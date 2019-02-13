@@ -24,19 +24,19 @@ extension Results {
     public func distinct(_ predicateFields: PredicateField...) -> Results<Element> {
         return distinct(by: predicateFields.map { $0.keyPath() })
     }
-    
+
     public func min<T: MinMaxType>(_ predicateField: PredicateField) -> T? {
         return min(ofProperty: predicateField.keyPath())
     }
-    
+
     public func max<T: MinMaxType>(_ predicateField: PredicateField) -> T? {
         return max(ofProperty: predicateField.keyPath())
     }
-    
+
     public func average<T: AddableType>(_ predicateField: PredicateField) -> T? {
         return average(ofProperty: predicateField.keyPath())
     }
-    
+
     public func sum<T: AddableType>(_ predicateField: PredicateField) -> T {
         return sum(ofProperty: predicateField.keyPath())
     }
