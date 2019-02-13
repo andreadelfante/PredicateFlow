@@ -22,7 +22,7 @@
         <a class="header-link" href="index.html">
           PredicateFlow Docs
         </a>
-         (80% documented)
+         (77% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -206,11 +206,18 @@
 <li>Drag the new <code>Run Script</code> phase <strong>above</strong> the <code>Compile Sources</code> phase and <strong>below</strong> <code>Check Pods Manifest.lock</code>, expand it and paste the following script:<br>
 <code>
 &quot;$PODS_ROOT/Sourcery/bin/sourcery&quot; --sources &quot;$PODS_ROOT/PredicateFlow/PredicateFlow/Classes/Utils/&quot; --sources &quot;$SRCROOT&quot; --templates &quot;$PODS_ROOT/PredicateFlow/PredicateFlow/Templates/PredicateFlow.stencil&quot; --output &quot;$SRCROOT/PredicateFlow.generated.swift&quot;
-</code>
-For Xcode 10 only, add a new <code>Output Files</code> and paste the following:
-<code>
-$SRCROOT/PredicateFlow.generated.swift
 </code></li>
+</ol>
+
+<p>In case you are using <strong>PredicateFlow-Realm</strong>, past the following  script instead of the above one:</p>
+<pre class="highlight plaintext"><code>   "$PODS_ROOT/Sourcery/bin/sourcery" --sources "$PODS_ROOT/PredicateFlow/PredicateFlow/Classes/Utils/" --sources "$SRCROOT" --templates "$PODS_ROOT/PredicateFlow/PredicateFlow/Templates/PredicateFlow-Realm.stencil" --output "$SRCROOT/PredicateFlow.generated.swift"
+</code></pre>
+
+<p>For Xcode 10 only, add a new <code>Output Files</code> and paste the following:</p>
+<pre class="highlight plaintext"><code>   $SRCROOT/PredicateFlow.generated.swift
+</code></pre>
+
+<ol>
 <li>Build your project. In Finder you will now see a <code>PredicateFlow.generated.swift</code> in the <code>$SRCROOT</code>-folder, drag the <code>PredicateFlow.generated.swift</code> files into your project and <strong>uncheck</strong> <code>Copy items if needed</code></li>
 </ol>
 
@@ -285,17 +292,18 @@ $SRCROOT/PredicateFlow.generated.swift
 
 <p>To type a floawable NSPredicate, just write:</p>
 <pre class="highlight swift"><code><span class="kt">DogSchema</span><span class="o">.</span><span class="n">age</span><span class="o">.</span><span class="nf">isEqual</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="nf">query</span><span class="p">()</span>
+<span class="c1">// or</span>
 <span class="c1">// Vanilla mode: </span>
 <span class="c1">// NSPredicate("age == %@", 10)</span>
 </code></pre>
 
 <p>You can also write compound predicate, and use deeper fields:</p>
-<pre class="highlight swift"><code><span class="kt">PredicateBuilder</span><span class="p">(</span><span class="kt">DogSchema</span><span class="o">.</span><span class="n">age</span><span class="o">.</span><span class="nf">isGreater</span><span class="p">(</span><span class="nv">than</span><span class="p">:</span> <span class="mi">10</span><span class="p">))</span>
+<pre class="highlight swift"><code><span class="kt">PredicateBuilder</span><span class="p">(</span><span class="kt">DogSchema</span><span class="o">.</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span>
     <span class="o">.</span><span class="nf">and</span><span class="p">(</span><span class="kt">DogSchema</span><span class="o">.</span><span class="n">isHungry</span><span class="o">.</span><span class="n">isTrue</span><span class="p">)</span>
     <span class="o">.</span><span class="nf">and</span><span class="p">(</span><span class="kt">DogSchema</span><span class="o">.</span><span class="n">age</span><span class="o">.</span><span class="nf">between</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-    <span class="o">.</span><span class="nf">and</span><span class="p">(</span><span class="kt">DogSchema</span><span class="o">.</span><span class="n">owner</span><span class="o">.</span><span class="nf">element</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="nf">isEqual</span><span class="p">(</span><span class="s">"Foo"</span><span class="p">))</span>
-    <span class="o">.</span><span class="nf">or</span><span class="p">(</span><span class="kt">DogSchema</span><span class="o">.</span><span class="n">owner</span><span class="o">.</span><span class="nf">element</span><span class="p">()</span><span class="o">.</span><span class="n">dogs</span><span class="o">.</span><span class="nf">maxElements</span><span class="p">()</span><span class="o">.</span><span class="n">age</span><span class="o">.</span><span class="nf">isGreater</span><span class="p">(</span><span class="nv">than</span><span class="p">:</span> <span class="mi">10</span><span class="p">))</span>
-    <span class="o">.</span><span class="nf">or</span><span class="p">(</span><span class="kt">DogSchema</span><span class="o">.</span><span class="n">owner</span><span class="o">.</span><span class="nf">element</span><span class="p">()</span><span class="o">.</span><span class="n">dogs</span><span class="o">.</span><span class="nf">anyElements</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="nf">isEqual</span><span class="p">(</span><span class="s">"Foo"</span><span class="p">))</span>
+    <span class="o">.</span><span class="nf">and</span><span class="p">(</span><span class="kt">DogSchema</span><span class="o">.</span><span class="n">owner</span><span class="o">.</span><span class="nf">element</span><span class="p">()</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s">"Foo"</span><span class="p">)</span>
+    <span class="o">.</span><span class="nf">or</span><span class="p">(</span><span class="kt">DogSchema</span><span class="o">.</span><span class="n">owner</span><span class="o">.</span><span class="nf">element</span><span class="p">()</span><span class="o">.</span><span class="n">dogs</span><span class="o">.</span><span class="nf">maxElements</span><span class="p">()</span><span class="o">.</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="o">.</span><span class="nf">or</span><span class="p">(</span><span class="kt">DogSchema</span><span class="o">.</span><span class="n">owner</span><span class="o">.</span><span class="nf">element</span><span class="p">()</span><span class="o">.</span><span class="n">dogs</span><span class="o">.</span><span class="nf">anyElements</span><span class="p">()</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s">"Foo"</span><span class="p">)</span>
     <span class="o">.</span><span class="nf">build</span><span class="p">()</span>
 
 <span class="c1">// Vanilla mode: </span>
@@ -346,7 +354,7 @@ You can open an issue for problems or suggestions, and you can propose your own 
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://twitter.com/a_delfante" target="_blank" rel="external">andreadelfante</a>. All rights reserved. (Last updated: 2018-12-01)</p>
+      <p>&copy; 2019 <a class="link" href="https://twitter.com/a_delfante" target="_blank" rel="external">andreadelfante</a>. All rights reserved. (Last updated: 2019-02-13)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
