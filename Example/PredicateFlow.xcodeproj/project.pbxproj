@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		652A13782138938C00BB34F7 /* LinkingObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652A13772138938C00BB34F7 /* LinkingObjectTests.swift */; };
+		653CC0612215F62B00CFC0A0 /* Test2Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653CC0602215F62B00CFC0A0 /* Test2Object.swift */; };
 		6545209F20A3743D005362FD /* PredicateBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6545209E20A3743D005362FD /* PredicateBuilderTests.swift */; };
 		65849694211C590A00D5119A /* PredicatePropertyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65849693211C590A00D5119A /* PredicatePropertyTests.swift */; };
 		65849696211C598C00D5119A /* BasicComparisonQueryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65849695211C598C00D5119A /* BasicComparisonQueryTests.swift */; };
@@ -32,6 +33,7 @@
 		607FACE51AFB9204008FA782 /* PredicateFlow_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PredicateFlow_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		652A13772138938C00BB34F7 /* LinkingObjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkingObjectTests.swift; sourceTree = "<group>"; };
+		653CC0602215F62B00CFC0A0 /* Test2Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test2Object.swift; sourceTree = "<group>"; };
 		6545209E20A3743D005362FD /* PredicateBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredicateBuilderTests.swift; sourceTree = "<group>"; };
 		65849693211C590A00D5119A /* PredicatePropertyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredicatePropertyTests.swift; sourceTree = "<group>"; };
 		65849695211C598C00D5119A /* BasicComparisonQueryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicComparisonQueryTests.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				914BF26620409C8900C835D3 /* Dog.swift */,
 				914BF26720409C8900C835D3 /* Person.swift */,
 				65E11DE32126D9960029FB3E /* TestObject.swift */,
+				653CC0602215F62B00CFC0A0 /* Test2Object.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -272,7 +275,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/Sourcery/bin/sourcery\" --sources \"$SRCROOT/Tests\" --templates \"$SRCROOT/Tests/PredicateFlow-Realm.stencil\" --output \"$SRCROOT/Tests/Models/PredicateFlow.generated.swift\" --disableCache\n";
+			shellScript = "\"$PODS_ROOT/Sourcery/bin/sourcery\" --sources \"$SRCROOT/Tests\" --sources \"$PODS_ROOT/RealmSwift\" --templates \"$SRCROOT/Tests/PredicateFlow-Realm.stencil\" --output \"$SRCROOT/Tests/Models/PredicateFlow.generated.swift\" --disableCache\n";
 		};
 		9A57FEA9A39798F307051D72 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -326,6 +329,7 @@
 				65E11DE02126D8880029FB3E /* SortDescriptorTests.swift in Sources */,
 				6584969D211C5FE200D5119A /* ObjectPropertyTests.swift in Sources */,
 				65E11DE82126DDD10029FB3E /* ResultsTests.swift in Sources */,
+				653CC0612215F62B00CFC0A0 /* Test2Object.swift in Sources */,
 				65849696211C598C00D5119A /* BasicComparisonQueryTests.swift in Sources */,
 				65849699211C5C6C00D5119A /* StringComparisonQueryTests.swift in Sources */,
 				914BF26A20409C8900C835D3 /* Dog.swift in Sources */,

@@ -31,7 +31,7 @@ Write amazing, strong-typed and easy-to-read NSPredicate. This library allows yo
    
    In case you are using **PredicateFlow-Realm**, past the following  script instead of the above one:
    ```
-   "$PODS_ROOT/Sourcery/bin/sourcery" --sources "$PODS_ROOT/PredicateFlow/PredicateFlow/Classes/Utils/" --sources "$SRCROOT" --templates "$PODS_ROOT/PredicateFlow/PredicateFlow/Templates/PredicateFlow-Realm.stencil" --output "$SRCROOT/PredicateFlow.generated.swift"
+   "$PODS_ROOT/Sourcery/bin/sourcery" --sources "$SRCROOT/Tests" --sources "$PODS_ROOT/RealmSwift" --templates "$SRCROOT/Tests/PredicateFlow-Realm.stencil" --output "$SRCROOT/Tests/Models/PredicateFlow.generated.swift"
    ```
    
    For Xcode 10 only, add a new `Output Files` and paste the following:
