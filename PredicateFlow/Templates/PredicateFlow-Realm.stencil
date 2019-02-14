@@ -4,20 +4,40 @@ import PredicateFlow
 
 {% macro createValueForCollectionProperty variable type %}
     /// "{{ variable.name }}" property
-    {{ type.accessLevel }} var {{ variable.name }}: CollectionProperty<{{ variable.definedInTypeName.name }}Schema> { return builder.collection("{{ variable.name }}") }
+    {{ type.accessLevel }} var {{ variable.name }}: CollectionProperty<{{ variable.typeName.generic.typeParameters.first.typeName.name }}{% if variable.typeName.generic.typeParameters.first.type.implements.PredicateSchema %}Schema{% endif %}> { return builder.collection("{{ variable.name }}") }
     /// "{{ variable.name }}" property for static access
-    {{ type.accessLevel }} static var {{ variable.name }}: CollectionProperty<{{ variable.definedInTypeName.name }}Schema> { return {{ type.name }}Schema().{{ variable.name }} }
+    {{ type.accessLevel }} static var {{ variable.name }}: CollectionProperty<{{ variable.typeName.generic.typeParameters.first.typeName.name }}{% if variable.typeName.generic.typeParameters.first.type.implements.PredicateSchema %}Schema{% endif %}> { return {{ type.name }}Schema().{{ variable.name }} }
+{% endmacro %}
+{% macro createValueForCustomProperty variable type obj %}
+    /// "{{ variable.name }}" property
+    {{ type.accessLevel }} var {{ variable.name }}: {{ obj }}PredicateProperty { return builder.{{ obj|lowerFirstLetter }}("{{ variable.name }}") }
+    /// "{{ variable.name }}" property for static access
+    {{ type.accessLevel }} static var {{ variable.name }}: {{ obj }}PredicateProperty { return {{ type.name }}Schema().{{ variable.name }} }
+{% endmacro %}
+{% macro createValueForGenericProperty variable type %}
+    /// "{{ variable.name }}" property
+    {{ type.accessLevel }} var {{ variable.name }}: PredicateProperty<{{ variable.typeName.generic.typeParameters.first.typeName.name }}> { return builder.generic("{{ variable.name }}") }
+    /// "{{ variable.name }}" property for static access
+    {{ type.accessLevel }} static var {{ variable.name }}: PredicateProperty<{{ variable.typeName.generic.typeParameters.first.typeName.name }}> { return {{ type.name }}Schema().{{ variable.name }} }
 {% endmacro %}
 {% for type in types.implementing.PredicateSchema %}
+/// The "{{ type.name }}" Predicate Schema extension for Realm
 extension {{ type.name }}Schema {
 {% for variable in type.storedVariables %}
-{% if variable.unwrappedTypeName|hasPrefix:"List" %}
+{% if variable.typeName.generic.name == "List" %}
 {% call createValueForCollectionProperty variable type %}
-{% elif variable.unwrappedTypeName|hasPrefix:"LinkingObjects" %}
+{% elif variable.typeName.generic.name == "LinkingObjects" %}
 {% call createValueForCollectionProperty variable type %}
+{% elif variable.typeName.generic.name == "RealmOptional" and variable.typeName.generic.typeParameters.first.typeName.name == "Bool" %}
+{% call createValueForCustomProperty variable type "Bool" %}
+{% elif variable.typeName.generic.name == "RealmOptional" and variable.typeName.generic.typeParameters.first.typeName.name == "String" %}
+{% call createValueForCustomProperty variable type "String" %}
+{% elif variable.typeName.generic.name == "RealmOptional" %}
+{% call createValueForGenericProperty variable type %}
 {% endif %}
 {% endfor %}
 }
+
 {% endfor %}
 
-{% include "PredicateFlow.stencil"%}
+{% include "PredicateFlow.stencil" %}

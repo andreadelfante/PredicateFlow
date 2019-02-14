@@ -17,6 +17,11 @@ class TestObject: Object, PredicateSchema {
     @objc dynamic var date: Date?
     let children = List<TestObject>()
     let parent = LinkingObjects<TestObject>(TestObject.self, TestObjectSchema.children)
+    let numbers = List<Int>()
+    let test2Objects = List<Test2Object>()
+    let booleans = List<Bool>()
+    let doubles = List<Double>()
+    let floats = List<Float>()
     
     convenience init(key: Int, string: String, int: Int, date: Date? = nil) {
         self.init()

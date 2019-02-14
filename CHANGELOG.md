@@ -1,4 +1,14 @@
-1.2.0 Release notes (2019-02-14)
+1.2.1 Release notes (2019-02-14)
+=============================================================
+### Enhancements
+* Fix wrong generation for Realm `List` and `LinkingObjects`
+* Add support for type `RealmOptional`
+* Change script to generate `PredicateFlow-Realm`. Please use this:
+```   
+"$PODS_ROOT/Sourcery/bin/sourcery" --sources "$SRCROOT/Tests" --sources "$PODS_ROOT/RealmSwift" --templates "$SRCROOT/Tests/PredicateFlow-Realm.stencil" --output "$SRCROOT/Tests/Models/PredicateFlow.generated.swift"
+```
+
+1.2.0 Release notes (2019-02-13)
 =============================================================
 ### Breaking Changes
 * Add support to generate fields of type `List` and `LinkingObjects`, if you use `PredicateFlow-Realm.stencil`.
