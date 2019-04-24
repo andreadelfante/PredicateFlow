@@ -22,11 +22,11 @@ public extension PredicateField {
 
         - returns: The key path of this field.
     */
-	public func keyPath() -> String {
+	func keyPath() -> String {
 		return self.name
 	}
 
-    public var description: String {
+    var description: String {
         return keyPath()
     }
 }

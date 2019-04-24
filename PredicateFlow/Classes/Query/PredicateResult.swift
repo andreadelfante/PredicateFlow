@@ -29,15 +29,15 @@ public extension PredicateResult {
 	/**
 	Alias for predicate.
 	*/
-	public func query() -> NSPredicate {
+	func query() -> NSPredicate {
 		return predicate
 	}
 
-    public var description: String {
+    var description: String {
         return predicate.description
     }
 
-    public var debugDescription: String {
+    var debugDescription: String {
         return predicate.debugDescription
     }
 }

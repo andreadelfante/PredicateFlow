@@ -120,7 +120,7 @@ public extension FlowStringComparable {
      
      - returns: a predicate result.
      */
-    public func begins(with string: String) -> PredicateResult {
+    func begins(with string: String) -> PredicateResult {
         return begins(with: string, options: [])
     }
 
@@ -132,7 +132,7 @@ public extension FlowStringComparable {
      
      - returns: a predicate result.
      */
-    public func contains(_ string: String) -> PredicateResult {
+    func contains(_ string: String) -> PredicateResult {
         return contains(string, options: [])
     }
 
@@ -144,7 +144,7 @@ public extension FlowStringComparable {
      
      - returns: a predicate result.
      */
-    public func ends(with string: String) -> PredicateResult {
+    func ends(with string: String) -> PredicateResult {
         return ends(with: string, options: [])
     }
 
@@ -156,7 +156,7 @@ public extension FlowStringComparable {
      
      - returns: a predicate result.
      */
-    public func like(_ string: String) -> PredicateResult {
+    func like(_ string: String) -> PredicateResult {
         return like(string, options: [])
     }
 
@@ -168,7 +168,7 @@ public extension FlowStringComparable {
      
      - returns: a predicate result.
      */
-    public func matches(_ string: String) -> PredicateResult {
+    func matches(_ string: String) -> PredicateResult {
         return matches(string, options: [])
     }
 
@@ -180,7 +180,7 @@ public extension FlowStringComparable {
      
      - returns: a predicate result.
      */
-    public func notBegins(with string: String) -> PredicateResult {
+    func notBegins(with string: String) -> PredicateResult {
         return notBegins(with: string, options: [])
     }
 
@@ -192,7 +192,7 @@ public extension FlowStringComparable {
      
      - returns: a predicate result.
      */
-    public func notContains(_ string: String) -> PredicateResult {
+    func notContains(_ string: String) -> PredicateResult {
         return notContains(string, options: [])
     }
 
@@ -204,7 +204,7 @@ public extension FlowStringComparable {
      
      - returns: a predicate result.
      */
-    public func notEnds(with string: String) -> PredicateResult {
+    func notEnds(with string: String) -> PredicateResult {
         return notEnds(with: string, options: [])
     }
 
@@ -216,7 +216,7 @@ public extension FlowStringComparable {
      
      - returns: a predicate result.
      */
-    public func notLike(_ string: String) -> PredicateResult {
+    func notLike(_ string: String) -> PredicateResult {
         return notLike(string, options: [])
     }
 
@@ -228,7 +228,7 @@ public extension FlowStringComparable {
      
      - returns: a predicate result.
      */
-    public func notMatches(_ string: String) -> PredicateResult {
+    func notMatches(_ string: String) -> PredicateResult {
         return notMatches(string, options: [])
     }
 }
@@ -243,7 +243,7 @@ public extension FlowStringComparable {
      
      - returns: a predicate result.
      */
-    public func begins(with string: String, options: StringComparisonOption...) -> PredicateResult {
+    func begins(with string: String, options: StringComparisonOption...) -> PredicateResult {
         return begins(with: string, options: options)
     }
 
@@ -255,7 +255,7 @@ public extension FlowStringComparable {
      
      - returns: a predicate result.
      */
-    public func contains(_ string: String, options: StringComparisonOption...) -> PredicateResult {
+    func contains(_ string: String, options: StringComparisonOption...) -> PredicateResult {
         return contains(string, options: options)
     }
 
@@ -267,7 +267,7 @@ public extension FlowStringComparable {
      
      - returns: a predicate result.
      */
-    public func ends(with string: String, options: StringComparisonOption...) -> PredicateResult {
+    func ends(with string: String, options: StringComparisonOption...) -> PredicateResult {
         return ends(with: string, options: options)
     }
 
@@ -279,7 +279,7 @@ public extension FlowStringComparable {
      
      - returns: a predicate result.
      */
-    public func like(_ string: String, options: StringComparisonOption...) -> PredicateResult {
+    func like(_ string: String, options: StringComparisonOption...) -> PredicateResult {
         return like(string, options: options)
     }
 
@@ -291,7 +291,7 @@ public extension FlowStringComparable {
      
      - returns: a predicate result.
      */
-    public func matches(_ string: String, options: StringComparisonOption...) -> PredicateResult {
+    func matches(_ string: String, options: StringComparisonOption...) -> PredicateResult {
         return matches(string, options: options)
     }
 
@@ -303,7 +303,7 @@ public extension FlowStringComparable {
      
      - returns: a predicate result.
      */
-    public func notBegins(with string: String, options: StringComparisonOption...) -> PredicateResult {
+    func notBegins(with string: String, options: StringComparisonOption...) -> PredicateResult {
         return notBegins(with: string, options: options)
     }
 
@@ -315,7 +315,7 @@ public extension FlowStringComparable {
      
      - returns: a predicate result.
      */
-    public func notContains(_ string: String, options: StringComparisonOption...) -> PredicateResult {
+    func notContains(_ string: String, options: StringComparisonOption...) -> PredicateResult {
         return notContains(string, options: options)
     }
 
@@ -327,7 +327,7 @@ public extension FlowStringComparable {
      
      - returns: a predicate result.
      */
-    public func notEnds(with string: String, options: StringComparisonOption...) -> PredicateResult {
+    func notEnds(with string: String, options: StringComparisonOption...) -> PredicateResult {
         return notEnds(with: string, options: options)
     }
 
@@ -339,7 +339,7 @@ public extension FlowStringComparable {
      
      - returns: a predicate result.
      */
-    public func notLike(_ string: String, options: StringComparisonOption...) -> PredicateResult {
+    func notLike(_ string: String, options: StringComparisonOption...) -> PredicateResult {
         return notLike(string, options: options)
     }
 
@@ -351,7 +351,7 @@ public extension FlowStringComparable {
      
      - returns: a predicate result.
      */
-    public func notMatches(_ string: String, options: StringComparisonOption...) -> PredicateResult {
+    func notMatches(_ string: String, options: StringComparisonOption...) -> PredicateResult {
         return notMatches(string, options: options)
     }
 }

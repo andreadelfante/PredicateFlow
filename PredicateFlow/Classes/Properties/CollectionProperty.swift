@@ -73,7 +73,7 @@ public extension CollectionProperty where T: GeneratedPredicateSchema {
 	
 	- returns: The current elements schema of this property.
 	*/
-	public func elements() -> T {
+    func elements() -> T {
 		return T.init(compoundFieldBuilder: compoundFieldBuilder)
 	}
 
@@ -83,7 +83,7 @@ public extension CollectionProperty where T: GeneratedPredicateSchema {
 	
 	- returns: The current elements schema of this property.
 	*/
-	public func anyElements() -> T {
+    func anyElements() -> T {
 		compoundFieldBuilder.any()
 		return elements()
 	}
@@ -94,7 +94,7 @@ public extension CollectionProperty where T: GeneratedPredicateSchema {
 	
 	- returns: The current elements schema of this property.
 	*/
-	public func someElements() -> T {
+    func someElements() -> T {
 		compoundFieldBuilder.some()
 		return elements()
 	}
@@ -105,7 +105,7 @@ public extension CollectionProperty where T: GeneratedPredicateSchema {
 	
 	- returns: The current elements schema of this property.
 	*/
-	public func allElements() -> T {
+    func allElements() -> T {
 		compoundFieldBuilder.all()
 		return elements()
 	}
@@ -116,7 +116,7 @@ public extension CollectionProperty where T: GeneratedPredicateSchema {
 	
 	- returns: The current elements schema of this property.
 	*/
-	public func noneElements() -> T {
+    func noneElements() -> T {
 		compoundFieldBuilder.none()
 		return elements()
 	}
@@ -126,7 +126,7 @@ public extension CollectionProperty where T: GeneratedPredicateSchema {
 	
 	- returns: The current elements schema of this property.
 	*/
-	public func avgElements() -> T {
+    func avgElements() -> T {
 		compoundFieldBuilder.avg()
 		return elements()
 	}
@@ -136,7 +136,7 @@ public extension CollectionProperty where T: GeneratedPredicateSchema {
 	
 	- returns: The current elements schema of this property.
 	*/
-	public func countElements() -> T {
+    func countElements() -> T {
 		compoundFieldBuilder.count()
 		return elements()
 	}
@@ -146,7 +146,7 @@ public extension CollectionProperty where T: GeneratedPredicateSchema {
 	
 	- returns: The current elements schema of this property.
 	*/
-	public func minElements() -> T {
+    func minElements() -> T {
 		compoundFieldBuilder.min()
 		return elements()
 	}
@@ -156,7 +156,7 @@ public extension CollectionProperty where T: GeneratedPredicateSchema {
 	
 	- returns: The current elements schema of this property.
 	*/
-	public func maxElements() -> T {
+    func maxElements() -> T {
 		compoundFieldBuilder.max()
 		return elements()
 	}
@@ -166,7 +166,7 @@ public extension CollectionProperty where T: GeneratedPredicateSchema {
 	
 	- returns: The current elements schema of this property.
 	*/
-	public func sumElements() -> T {
+    func sumElements() -> T {
 		compoundFieldBuilder.sum()
 		return elements()
 	}
@@ -178,7 +178,7 @@ public extension CollectionProperty where T: GeneratedPredicateSchema {
 	
 	- returns: A collection property.
 	*/
-	public func subquery(_ subquery: (SubqueryProperty<T>) -> PredicateResult) -> CollectionProperty<T> {
+    func subquery(_ subquery: (SubqueryProperty<T>) -> PredicateResult) -> CollectionProperty<T> {
         return self.subquery("random_element_name", subquery)
 	}
 
@@ -190,7 +190,7 @@ public extension CollectionProperty where T: GeneratedPredicateSchema {
      
      - returns: A collection property.
      */
-    public func subquery(_ variableName: String, _ subquery: (SubqueryProperty<T>) -> PredicateResult) -> CollectionProperty<T> {
+    func subquery(_ variableName: String, _ subquery: (SubqueryProperty<T>) -> PredicateResult) -> CollectionProperty<T> {
         let property = SubqueryProperty<T>(variableName)
         return SubQuery(self, subqueryProperty: property, subquery(property)).execute()
     }
@@ -204,7 +204,7 @@ public extension CollectionProperty where T == String {
 	
 	- returns: A string comparison query.
 	*/
-	public func anyStrings() -> StringComparisonQuery {
+    func anyStrings() -> StringComparisonQuery {
 		return StringComparisonQuery(compoundFieldBuilder.any().field())
 	}
 
@@ -214,7 +214,7 @@ public extension CollectionProperty where T == String {
 	
 	- returns: A string comparison query.
 	*/
-	public func someStrings() -> StringComparisonQuery {
+    func someStrings() -> StringComparisonQuery {
 		return StringComparisonQuery(compoundFieldBuilder.some().field())
 	}
 
@@ -224,7 +224,7 @@ public extension CollectionProperty where T == String {
 	
 	- returns: A string comparison query.
 	*/
-	public func allStrings() -> StringComparisonQuery {
+    func allStrings() -> StringComparisonQuery {
 		return StringComparisonQuery(compoundFieldBuilder.all().field())
 	}
 
@@ -234,7 +234,7 @@ public extension CollectionProperty where T == String {
 	
 	- returns: A string comparison query.
 	*/
-	public func noneStrings() -> StringComparisonQuery {
+    func noneStrings() -> StringComparisonQuery {
 		return StringComparisonQuery(compoundFieldBuilder.none().field())
 	}
 }

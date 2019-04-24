@@ -35,6 +35,4 @@ Carthage/Build
 # `pod install` in .travis.yml
 #
 Pods/
-
-*.lock
 *.xcworkspace

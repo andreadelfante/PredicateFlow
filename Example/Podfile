@@ -3,5 +3,5 @@ target 'PredicateFlow_Tests' do
   pod 'PredicateFlow', :path => '../'
   pod 'PredicateFlow/Realm', :path => '../'
   
-  pod 'SwiftLint', '~> 0.29.1'
+  pod 'SwiftLint', '~> 0.31.0'
 end
