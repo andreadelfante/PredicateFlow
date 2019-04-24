@@ -1,4 +1,4 @@
-osx_image: xcode10
+osx_image: xcode10.2
 language: swift
 
 env:
@@ -13,6 +13,13 @@ cache:
   - ./build
   - ./Example/Pods
   - ./Example/PredicateFlow.xcworkspace
+
+before_install:
+  - gem update --system
+  - gem install bundler
+
+after_script:
+  - date
 
 jobs:
   include:
