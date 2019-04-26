@@ -1,4 +1,4 @@
-1.2.2 Release notes (2018-04-24)
+1.2.2 Release notes (2019-04-24)
 =============================================================
 ### Enhancements
 * Add support to Swift 5
