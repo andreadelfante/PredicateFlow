@@ -9,7 +9,7 @@ import RealmSwift
 
 extension LinkingObjects {
 
-    public convenience init(_ type: Element.Type, _ predicateField: PredicateField) {
+	public init(_ type: Element.Type, _ predicateField: PredicateField) {
         self.init(fromType: type, property: predicateField.keyPath())
     }
 
