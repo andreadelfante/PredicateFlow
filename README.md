@@ -144,7 +144,7 @@ DogSchema.owner.element().dogs.keyPath()
 
 ## PredicateFlow/Realm
 
-If you want to use flowable and strong-typed queries in [Realm](https://github.com/realm/realm-cocoa), add `pod 'PredicateFlow/Realm'` to your [Podfile](http://cocoapods.org/#get_started) and run `pod install`.
+If you want to use flowable and strong-typed queries in [Realm](https://github.com/realm/realm-cocoa), add **both** `pod 'PredicateFlow'` and `pod 'PredicateFlow/Realm'` to your [Podfile](http://cocoapods.org/#get_started) and run `pod install`.
 ```swift
 let realm = try! Realm()
 realm.objects(Dog.self)
