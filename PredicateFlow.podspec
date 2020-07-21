@@ -1,6 +1,6 @@
 Pod::Spec.new do |pf|
   pf.name             = 'PredicateFlow'
-  pf.version          = '1.3'
+  pf.version          = '1.4'
   pf.summary          = 'Flowable NSPredicate. Written in Swift.'
 
   pf.description      = <<-DESC
@@ -17,14 +17,14 @@ Pod::Spec.new do |pf|
 
   pf.cocoapods_version = '> 0.39.0'
 
-  pf.ios.deployment_target = '8.0'
-  pf.osx.deployment_target = '10.9'
-  pf.tvos.deployment_target = '9.0'
-  pf.watchos.deployment_target = '2.0'
+  pf.ios.deployment_target = '10.0'
+  pf.osx.deployment_target = '10.12'
+  pf.tvos.deployment_target = '10.0'
+  pf.watchos.deployment_target = '3.0'
 
   pf.default_subspec = 'Basic'  
 
-  pf.dependency 'Sourcery', '~> 0.17.0'
+  pf.dependency 'Sourcery', '~> 0.18'
 
   pf.subspec 'Basic' do |basic|
     basic.source_files = 'PredicateFlow/Classes/**/*'
@@ -34,6 +34,6 @@ Pod::Spec.new do |pf|
   pf.subspec 'Realm' do |realm|
     realm.source_files = [ 'PredicateFlow/Classes/**/*', 'PredicateFlow-Realm/Classes/**/*' ]
     
-    realm.dependency 'RealmSwift'
+    realm.dependency 'RealmSwift', '~> 5'
   end
 end

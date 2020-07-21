@@ -36,3 +36,5 @@ Carthage/Build
 #
 Pods/
 *.xcworkspace
+
+vendor/
