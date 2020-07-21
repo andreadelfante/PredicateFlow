@@ -17,7 +17,7 @@ Pod::Spec.new do |pf|
 
   pf.cocoapods_version = '> 0.39.0'
 
-  pf.ios.deployment_target = '8.0'
+  pf.ios.deployment_target = '9.0'
   pf.osx.deployment_target = '10.9'
   pf.tvos.deployment_target = '9.0'
   pf.watchos.deployment_target = '2.0'
