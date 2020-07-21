@@ -10,7 +10,7 @@ Write amazing, strong-typed and easy-to-read NSPredicate. This library allows yo
 
 ## Supported platforms
 
-* iOS 8.0+
+* iOS 9.0+
 * macOS 10.9+
 * tvOS 9.0+
 * watchOS 2.0+
