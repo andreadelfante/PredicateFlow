@@ -24,7 +24,7 @@ Pod::Spec.new do |pf|
 
   pf.default_subspec = 'Basic'  
 
-  pf.dependency 'Sourcery', '~> 0.17.0'
+  pf.dependency 'Sourcery', '~> 1.0.2'
 
   pf.subspec 'Basic' do |basic|
     basic.source_files = 'PredicateFlow/Classes/**/*'
