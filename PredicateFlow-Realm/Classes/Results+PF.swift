@@ -13,7 +13,7 @@ extension Results {
         return filter(predicateResult.query())
     }
 
-    public func sorted(_ sortDescriptions: SortDescriptor...) -> Results<Element> {
+    public func sorted(_ sortDescriptions: RealmSwift.SortDescriptor...) -> Results<Element> {
         return sorted(by: sortDescriptions)
     }
 
@@ -25,19 +25,19 @@ extension Results {
         return distinct(by: predicateFields.map { $0.keyPath() })
     }
 
-    public func min<T: MinMaxType>(_ predicateField: PredicateField) -> T? {
+    public func min<T: _HasPersistedType>(_ predicateField: PredicateField) -> T? where T.PersistedType: MinMaxType {
         return min(ofProperty: predicateField.keyPath())
     }
 
-    public func max<T: MinMaxType>(_ predicateField: PredicateField) -> T? {
+    public func max<T: _HasPersistedType>(_ predicateField: PredicateField) -> T? where T.PersistedType: MinMaxType {
         return max(ofProperty: predicateField.keyPath())
     }
 
-    public func average<T: AddableType>(_ predicateField: PredicateField) -> T? {
+    public func average<T: _HasPersistedType>(_ predicateField: PredicateField) -> T? where T.PersistedType: AddableType {
         return average(ofProperty: predicateField.keyPath())
     }
 
-    public func sum<T: AddableType>(_ predicateField: PredicateField) -> T {
+    public func sum<T: _HasPersistedType>(_ predicateField: PredicateField) -> T where T.PersistedType: AddableType {
         return sum(ofProperty: predicateField.keyPath())
     }
 }

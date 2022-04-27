@@ -7,7 +7,7 @@
 
 import RealmSwift
 
-extension SortDescriptor {
+extension RealmSwift.SortDescriptor {
 
     public init(_ predicateField: PredicateField, ascending: Bool = true) {
         self.init(keyPath: predicateField.keyPath(), ascending: ascending)
@@ -16,11 +16,11 @@ extension SortDescriptor {
 
 extension PredicateField {
 
-    public func ascending() -> SortDescriptor {
+    public func ascending() -> RealmSwift.SortDescriptor {
         return SortDescriptor(self, ascending: true)
     }
 
-    public func descending() -> SortDescriptor {
+    public func descending() -> RealmSwift.SortDescriptor {
         return SortDescriptor(self, ascending: false)
     }
 }
