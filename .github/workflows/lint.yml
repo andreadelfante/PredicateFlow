@@ -6,8 +6,6 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Gem update system
-        run: gem update --system
       - name: Gem install bundler
         run: gem install bundler --user-install --no-document --quiet
       - name: Install Gem dependencies
@@ -18,8 +16,6 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Gem update system
-        run: gem update --system
       - name: Gem install bundler
         run: gem install bundler --user-install --no-document --quiet
       - name: Install Gem dependencies
