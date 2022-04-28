@@ -1,0 +1,24 @@
+name: "Test"
+on: [push]
+
+jobs:
+  test_debug:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Gem install bundler
+        run: gem install bundler --user-install --no-document --quiet
+      - name: Install Gem dependencies
+        run: bundle install
+      - name: Running tests (debug mode)
+        run: bundle exec fastlane test_debug
+  test_release:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Gem install bundler
+        run: gem install bundler --user-install --no-document --quiet
+      - name: Install Gem dependencies
+        run: bundle install
+      - name: Running tests (release mode)
+        run: bundle exec fastlane test_release
