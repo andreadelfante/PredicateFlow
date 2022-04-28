@@ -1,0 +1,24 @@
+name: "Lint"
+on: [push]
+
+jobs:
+  podspec:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Gem install bundler
+        run: gem install bundler --user-install --no-document --quiet
+      - name: Install Gem dependencies
+        run: bundle install
+      - name: Linting podspec
+        run: bundle exec fastlane podspec_lint
+  code:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Gem install bundler
+        run: gem install bundler --user-install --no-document --quiet
+      - name: Install Gem dependencies
+        run: bundle install
+      - name: Linting podspec
+        run: bundle exec fastlane code_lint
