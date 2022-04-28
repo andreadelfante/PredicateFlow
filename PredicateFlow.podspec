@@ -1,6 +1,6 @@
 Pod::Spec.new do |pf|
   pf.name             = 'PredicateFlow'
-  pf.version          = '1.5'
+  pf.version          = '1.6'
   pf.summary          = 'Flowable NSPredicate. Written in Swift.'
 
   pf.description      = <<-DESC
